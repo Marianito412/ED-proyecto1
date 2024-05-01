@@ -155,6 +155,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BibliotecaReportes\BibliotecaReportes.cpp" />
+    <ClCompile Include="BibliotecaReportes\BibliotecaReportesArboles.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolAA\ArbolAA.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolAVL\ArbolAVL.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolBinario\ArbolBinario.cpp" />
@@ -175,10 +176,12 @@
     <ClCompile Include="LectorArchivos\LectorArchivos.cpp" />
     <ClCompile Include="Menu\MenuFunciones.cpp" />
     <ClCompile Include="Menu\MenuFuncionesArboles.cpp" />
+    <ClCompile Include="Menu\MenuFuncionesCliente.cpp" />
     <ClCompile Include="Proyecto1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BibliotecaReportes\BibliotecaReportes.h" />
+    <ClInclude Include="BibliotecaReportes\BibliotecaReportesArboles.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolAA\ArbolAA.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolAVL\ArbolAVL.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolBinario\ArbolBinario.h" />
@@ -198,6 +201,7 @@
     <ClInclude Include="Estructuras\TablaHash\TablaHash.h" />
     <ClInclude Include="LectorArchivos\LectorArchivos.h" />
     <ClInclude Include="Menu\MenuFunciones.h" />
+    <ClInclude Include="Menu\MenuFuncionesCliente.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

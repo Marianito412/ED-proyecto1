@@ -43,6 +43,18 @@ void ArbolBinario::Infijo(NodoBase* Nodo)
     Infijo(Nodo->Derecha);
 }
 
+void ArbolBinario::IterarNodos(std::function<void(NodoBase*)> func)
+{
+    IterarNodosAux(Raiz, func);
+}
+
+void ArbolBinario::IterarNodosAux(NodoBase* Nodo, std::function<void(NodoBase*)> func)
+{
+    IterarNodosAux(Nodo->Izquierda, func);
+    func(Nodo);
+    IterarNodosAux(Nodo->Derecha, func);
+}
+
 void ArbolBinario::Insertar(NodoBase*& NodoRaiz, NodoBase* Nodo)
 {
     if (!NodoRaiz)

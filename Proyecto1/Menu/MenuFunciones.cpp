@@ -7,66 +7,68 @@
 #include "../Estructuras/Nodos/NodosDerivados/Ciudad/NodoCiudad.h"
 #include "../Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h"
 #pragma region Login 
-bool MenuFunciones::Login(TablaHash* TablaAdmins, TablaHash* TablaClientes)
+bool MenuFunciones::Login(TablaHash* TablaAdmins, TablaHash* TablaClientes, bool& Exitoso)
 {
     do
     {
         int AdminOCliente = 0;
-            cout<<"Desea ingresar como administrador o cliente?"<<endl;
-            cout<<"1. Administrador"<<endl;
-            cout<<"2. Cliente"<<endl;
-            cin>>AdminOCliente;
-        
-            switch (AdminOCliente)
+        cout << "Desea ingresar como administrador o cliente?" << endl;
+        cout << "1. Administrador" << endl;
+        cout << "2. Cliente" << endl;
+        cin >> AdminOCliente;
+
+        switch (AdminOCliente)
+        {
+        case 1:
             {
-            case 1:
+                int CodAdmin;
+                cout << "Ingrese su codigo de adminstrador: ";
+                cin >> CodAdmin;
+
+                NodoBase* NodoLoginAdmin = TablaAdmins->BuscarNodo(CodAdmin, [CodAdmin](NodoBase* Nodo)
                 {
-                    int CodAdmin;
-                    cout<<"Ingrese su codigo de adminstrador: ";
-                    cin>>CodAdmin;
-        
-                    NodoBase* NodoLoginAdmin = TablaAdmins->BuscarNodo(CodAdmin, [CodAdmin](NodoBase* Nodo)
+                    if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo))
                     {
-                        if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo))
-                        {
-                            return Admin->CodAministrador == CodAdmin;
-                        }
-                        return false;
-                    });
-                    if (!NodoLoginAdmin)
-                    {
-                        cout<<"Codigo inválido"<<endl;
-                        break;
+                        return Admin->CodAministrador == CodAdmin;
                     }
-                    cout<<"Se ingresó correctamente, bienvenido"<<endl;
-                    return true;    
+                    return false;
+                });
+                if (!NodoLoginAdmin)
+                {
+                    cout << "Codigo inválido" << endl;
+                    break;
                 }
-            case 2:
+                cout << "Se ingresó correctamente, bienvenido" << endl;
+                Exitoso = true;
+                return true;
+            }
+        case 2:
+            {
+                int Cedula;
+                cout << "Ingrese su cedula: ";
+                cin >> Cedula;
+
+                NodoBase* NodoLoginCliente = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo)
                 {
-                    int Cedula;
-                    cout<<"Ingrese su cedula: ";
-                    cin>>Cedula;
-        
-                    NodoBase* NodoLoginCliente = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo)
+                    if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo))
                     {
-                        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo))
-                        {
-                            return Cliente->Cedula == Cedula;
-                        }
-                        return false;
-                    });
-                    if (!NodoLoginCliente)
-                    {
-                        cout<<"Cedula inválida"<<endl;
-                        break;
+                        return Cliente->Cedula == Cedula;
                     }
-                    cout<<"Se ingresó correctamente, bienvenido"<<endl;
+                    return false;
+                });
+                if (!NodoLoginCliente)
+                {
+                    cout << "Cedula inválida" << endl;
+                    Exitoso = false;
                     return false;
                 }
-            default:
-                cout<<"Opcion invalida"<<endl;
-                break;
+                cout << "Se ingresó correctamente, bienvenido" << endl;
+                return false;
             }
+        default:
+            cout << "Opcion invalida" << endl;
+            break;
+        }
     }
     while (true);
 }

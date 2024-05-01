@@ -3,6 +3,7 @@
 #include <string>
 
 #include "BibliotecaReportes/BibliotecaReportes.h"
+#include "BibliotecaReportes/BibliotecaReportesArboles.h"
 #include "Estructuras/Arboles/ArbolAA/ArbolAA.h"
 #include "Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 #include "Estructuras/Arboles/ArbolBinario/ArbolBinario.h"
@@ -20,6 +21,7 @@
 #include "Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h"
 #include "Estructuras/TablaHash/TablaHash.h"
 #include "Menu/MenuFunciones.h"
+#include "Menu/MenuFuncionesCliente.h"
 
 static const string DIRECTORIO = "../Archivos/";
 
@@ -204,6 +206,9 @@ ArbolBinario* CargarCiudadesABB(string NombreArchivo)
 
 int main()
 {
+    TablaHash* TablaAdmins = CargarAdmins("Administradores.txt");
+    TablaHash* TablaClientes = CargarAdmins("Clientes.txt");
+    
     ArbolBinario* ArbolPasillos = CargarPasillosABB("Pasillos.txt");
     ArbolPasillos->Infijo(ArbolPasillos->Raiz);
     
@@ -218,11 +223,11 @@ int main()
 
     ArbolBinario* ArbolCiudades = CargarCiudadesABB("Ciudades.txt");
     ArbolCiudades->Infijo(ArbolCiudades->Raiz);
-    
-    //ArbolMarcas->MostrarRN();
-    //bool EsAdmin = MenuFunciones::Login(TablaAdmins, TablaClientes);
-    bool EsAdmin = true;
+
+    bool Exito;
+    bool EsAdmin = MenuFunciones::Login(TablaAdmins, TablaClientes, Exito);
     int opcion, subopcion1;
+    
     if (EsAdmin)
     {
         do {
@@ -532,6 +537,7 @@ int main()
                     
                     switch (subopcion1) {
                     case 1:
+                        BibliotecaReportesArboles::ReportarPasilloMasVisitado(ArbolPasillos);
                         //BibliotecaReportes::ReportarPasillos(ListaPasillos);
                         break;
                     case 2:
@@ -584,14 +590,10 @@ int main()
                 do {
             // Mostrar el menú principal
             cout << "Menu:" << endl;
-            cout << "1. Pasillo" << endl;
-            cout << "2. Producto" << endl;
-            cout << "3. Marca" << endl;
-            cout << "4. Inventario" << endl;
-            cout << "5. Clientes" << endl;
-            cout << "6. Administrador" << endl;
-            cout << "7. Ciudad" << endl;
-            cout << "8. Reportes" << endl;
+            cout << "1. Consultar Precio" << endl;
+            cout << "2. Consultar Descuento" << endl;
+            cout << "3. Consultar productos" << endl;
+            cout << "4. Comprar" << endl;
             cout << "9. Salir" << endl;
             // Solicitar al usuario que ingrese una opción
             cout << "Ingrese el numero de opcion: ";
@@ -601,28 +603,8 @@ int main()
             // Realizar acciones según la opción seleccionada
             switch (opcion) {
             case 1:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Pasillo:" << endl;
-                    cout << "1. Buscar" << endl;
-                    cout << "0. Atras" << endl;
-
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        //MenuFunciones::BuscarPasillo(ListaPasillos);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
+                cout << "Consultar Precio:" << endl;
+                MenuFuncionesCliente::ConsultarPrecio(ArbolMarcas);
                 break;
             case 2:
                 do {

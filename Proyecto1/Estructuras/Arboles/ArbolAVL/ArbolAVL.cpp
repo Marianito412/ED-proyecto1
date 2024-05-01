@@ -172,6 +172,18 @@ void ArbolAVL::Infijo(NodoBase* Nodo)
     Infijo(Nodo->Derecha);
 }
 
+void ArbolAVL::IterarNodos(std::function<void(NodoBase*)> func)
+{
+    IterarNodosAux(Raiz, func);
+}
+
+void ArbolAVL::IterarNodosAux(NodoBase* Nodo, std::function<void(NodoBase*)> func)
+{
+    IterarNodosAux(Nodo->Izquierda, func);
+    func(Nodo);
+    IterarNodosAux(Nodo->Derecha, func);
+}
+
 NodoBase* ArbolAVL::BuscarNodo(NodoBase* NodoRaiz, int Llave)
 {
     if (!NodoRaiz) return nullptr;

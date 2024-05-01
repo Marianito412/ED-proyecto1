@@ -1,10 +1,11 @@
 #pragma once
+#include <functional>
 #include <iostream>
 
 #include "../../Nodos/NodoBase.h"
 
 class ArbolRN {
-   private:
+private:
   NodoBase* Raiz;
   NodoBase* TNULL;
 
@@ -55,68 +56,7 @@ class ArbolRN {
     }
     return Busqueda(nodo->Derecha, numbuscado);
   }
-
- /* // For balancing the tree after deletion
-  void deleteFix(NodePtr x) {
-    NodePtr s;
-    while (x != root && x->color == 0) {
-      if (x == x->parent->left) {
-        s = x->parent->right;
-        if (s->color == 1) {
-          s->color = 0;
-          x->parent->color = 1;
-          leftRotate(x->parent);
-          s = x->parent->right;
-        }
-
-        if (s->left->color == 0 && s->right->color == 0) {
-          s->color = 1;
-          x = x->parent;
-        } else {
-          if (s->right->color == 0) {
-            s->left->color = 0;
-            s->color = 1;
-            rightRotate(s);
-            s = x->parent->right;
-          }
-
-          s->color = x->parent->color;
-          x->parent->color = 0;
-          s->right->color = 0;
-          leftRotate(x->parent);
-          x = root;
-        }
-      } else {
-        s = x->parent->left;
-        if (s->color == 1) {
-          s->color = 0;
-          x->parent->color = 1;
-          rightRotate(x->parent);
-          s = x->parent->left;
-        }
-
-        if (s->right->color == 0 && s->right->color == 0) {
-          s->color = 1;
-          x = x->parent;
-        } else {
-          if (s->left->color == 0) {
-            s->right->color = 0;
-            s->color = 1;
-            leftRotate(s);
-            s = x->parent->left;
-          }
-
-          s->color = x->parent->color;
-          x->parent->color = 0;
-          s->left->color = 0;
-          rightRotate(x->parent);
-          x = root;
-        }
-      }
-    }
-    x->color = 0;
-  }*/
-
+  
   void rbModificar(NodoBase* uRaiz, NodoBase* vValor) {
     if (Raiz->padre == nullptr) {
       Raiz = vValor;
@@ -127,58 +67,7 @@ class ArbolRN {
     }
     vValor->padre = uRaiz->padre;
   }
-
-  /*void deleteNodeHelper(NodePtr node, int key) {
-    NodePtr z = TNULL;
-    NodePtr x, y;
-    while (node != TNULL) {
-      if (node->data == key) {
-        z = node;
-      }
-
-      if (node->data <= key) {
-        node = node->right;
-      } else {
-        node = node->left;
-      }
-    }
-
-    if (z == TNULL) {
-      cout << "Key not found in the tree" << endl;
-      return;
-    }
-
-    y = z;
-    int y_original_color = y->color;
-    if (z->left == TNULL) {
-      x = z->right;
-      rbTransplant(z, z->right);
-    } else if (z->right == TNULL) {
-      x = z->left;
-      rbTransplant(z, z->left);
-    } else {
-      y = minimum(z->right);
-      y_original_color = y->color;
-      x = y->right;
-      if (y->parent == z) {
-        x->parent = y;
-      } else {
-        rbTransplant(y, y->right);
-        y->right = z->right;
-        y->right->parent = y;
-      }
-
-      rbTransplant(z, y);
-      y->left = z->left;
-      y->left->parent = y;
-      y->color = z->color;
-    }
-    delete z;
-    if (y_original_color == 0) {
-      deleteFix(x);
-    }
-  }*/
-
+  
   // Balanceo despues de inserción
   void insertarBalanceado(NodoBase* NodoEva) {
     NodoBase* uValor;
@@ -241,8 +130,9 @@ class ArbolRN {
       MostrarRN(raiz->Derecha, indent, true);
     }
   }
-
+  void IterarNodosAux(NodoBase* Nodo, std::function<void(NodoBase*)> func);
    public:
+  void IterarNodos(std::function<void(NodoBase*)> func);
     ArbolRN() {
     TNULL = new NodoBase();
     TNULL->color = 0;
@@ -388,10 +278,6 @@ class ArbolRN {
   NodoBase* getRaiz() {
     return this->Raiz;
   }
-
-/*  void deleteNode(int data) {
-    deleteNodeHelper(this->root, data);
-  }*/
 
   void MostrarRN() {
     if (Raiz) {
