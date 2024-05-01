@@ -109,6 +109,12 @@ void ArbolAVL::InsertarNodo(NodoBase*& NodoRaiz, bool HH, NodoBase* Nodo)
     }
     if (Nodo->GetLlave()<=NodoRaiz->GetLlave())
     {
+        if (Nodo->GetLlave()==NodoRaiz->GetLlave())
+        {
+            Nodo->Mostrar();
+            return;
+        }
+        
         InsertarNodo(NodoRaiz->Izquierda, HH, Nodo);
         if (HH)
         {
@@ -179,6 +185,8 @@ void ArbolAVL::IterarNodos(std::function<void(NodoBase*)> func)
 
 void ArbolAVL::IterarNodosAux(NodoBase* Nodo, std::function<void(NodoBase*)> func)
 {
+    if (!Nodo) return;
+    
     IterarNodosAux(Nodo->Izquierda, func);
     func(Nodo);
     IterarNodosAux(Nodo->Derecha, func);

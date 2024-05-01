@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+#include "../Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 #include "../Estructuras/Nodos/NodosDerivados/Pasillo/NodoPasillo.h"
 #include "../Estructuras/Nodos/NodosDerivados/Producto/NodoProducto.h"
 #include "../Estructuras/Arboles/ArbolRN/ArbolRN.h"
@@ -38,8 +39,26 @@ void MenuFuncionesCliente::ConsultarDescuento()
 {
 }
 
-void MenuFuncionesCliente::ConsultarProductos(ArbolBinario* ArbolPasillos)
+void MenuFuncionesCliente::ConsultarProductos(ArbolAVL* ArbolProductos)
 {
+    int CodPasillo;
+    
+    std::cout<<"Ingrese el codigo de pasillo: ";
+    std::cin>>CodPasillo;
+
+    
+    ArbolProductos->IterarNodos([CodPasillo](NodoBase* Nodo)
+    {
+        if (NodoProducto* Producto = dynamic_cast<NodoProducto*>(Nodo))
+        {
+            if (CodPasillo == Producto->Pasillo)
+            {
+                std::cout<<Producto->Nombre<<std::endl;
+            }
+        }
+    });
+
+    
 }
 
 void MenuFuncionesCliente::Comprar()

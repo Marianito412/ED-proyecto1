@@ -1,6 +1,6 @@
 #pragma once
 #include "../Estructuras/Arboles/ArbolRN/ArbolRN.h"
-#include "../Estructuras/Arboles/ArbolBinario/ArbolBinario.h"
+#include "../Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 
 class MenuFuncionesCliente
 {
@@ -9,7 +9,7 @@ public:
 
     static void ConsultarDescuento();
 
-    static void ConsultarProductos(ArbolBinario* ArbolPasillos);
+    static void ConsultarProductos(ArbolAVL* ArbolProductos);
 
     static void Comprar();
 };

@@ -607,52 +607,11 @@ int main()
                 MenuFuncionesCliente::ConsultarPrecio(ArbolMarcas);
                 break;
             case 2:
-                do {
-                    cout << "Producto:" << endl;
-                    cout << "1. Buscar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-
-                    switch (subopcion1)
-                    {
-                    case 1:
-                        //MenuFunciones::BuscarProducto(ListaProds, ListaPasillos);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
+               
                 break;
             case 3:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Marca:" << endl;
-                    cout << "1. Buscar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        //MenuFunciones::EncontrarMarcaProducto(ListaMarcas);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
+                cout << "Consultar Productos: "<<endl;
+                MenuFuncionesCliente::ConsultarProductos(ArbolProds);
                 break;
             case 4:
                 do {
