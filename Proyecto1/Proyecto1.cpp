@@ -206,6 +206,38 @@ ArbolBinario* CargarCiudadesABB(string NombreArchivo)
     return ArbolArchivo;
 }
 
+//ArbolB* CargarAdminsB(string NombreArchivo)
+//{
+//    ifstream Archivo;
+//    ArbolB* ArbolAdmins = new ArbolB();
+//    const string Directorio = DIRECTORIO + NombreArchivo;
+//    cout << Directorio << endl;
+//    Archivo.open(Directorio);
+//    for (string Linea; getline(Archivo, Linea);)
+//    {
+//        if (Linea.empty()) continue;
+//        NodoAdmin* NuevoAdmin = new NodoAdmin(Linea);
+//        ArbolAdmins->InsertarNodo(NuevoAdmin);
+//    }
+//    return ArbolAdmins;
+//}
+//
+//ArbolB* CargarClientesB(string NombreArchivo)
+//{
+//    ifstream Archivo;
+//    ArbolB* ArbolClientes = new ArbolB();
+//    const string Directorio = DIRECTORIO + NombreArchivo;
+//    cout << Directorio << endl;
+//    Archivo.open(Directorio);
+//    for (string Linea; getline(Archivo, Linea);)
+//    {
+//        if (Linea.empty()) continue;
+//        NodoCliente* NuevoCliente = new NodoCliente(Linea);
+//        ArbolClientes->InsertarNodo(NuevoCliente);
+//    }
+//    return ArbolClientes;
+//}
+
 int main()
 {
     ListaSimple* ListaCompras = new ListaSimple();
@@ -227,6 +259,9 @@ int main()
 
     ArbolBinario* ArbolCiudades = CargarCiudadesABB("Ciudades.txt");
     ArbolCiudades->Infijo(ArbolCiudades->Raiz);
+
+    //ArbolB* ArbolAdmin = CargarAdmins("Adminstrador.txt");
+    //ArbolB* ArbolClientes = CargarClientes("Clientes.txt");
 
 Inicio:
     
@@ -290,14 +325,14 @@ Inicio:
                             case 4:
                                 MenuFunciones::InsertarInventarioAA(ArbolInventario);
                                 break;
-                            case 5:
+                            case 5:                                
                                 //MenuFunciones::InsertarClientesB(ArbolClientes);
                                 break;
-                            case 6:
-                                //MenuFunciones::InsertarAdministrador(ArboAdministrador);
+                            case 6:                               
+                                //MenuFunciones::InsertarAdministradorB(ArboAdministrador);
                                 break;
                             case 7:
-                                //MenuFunciones::InsertarCiudad(ArbolCiudades);
+                                MenuFunciones::InsertarCiudadABB(ArbolCiudades);
                                 break;
                             case 0:
                                 cout << "Volviendo al menu principal..." << endl;
@@ -335,14 +370,14 @@ Inicio:
                             case 4:
                                 MenuFunciones::EncontrarInventarioAA(ArbolInventario);
                                 break;
-                            case 5:
+                            case 5:                                
                                 //MenuFunciones::EncontrarClientesB(ArbolClientes);
                                 break;
-                            case 6:
-                                //MenuFunciones::EncontrarAdministrador(ArboAdministrador);
+                            case 6:                                
+                                //MenuFunciones::EncontrarAdministradorB(ArboAdministrador);
                                 break;
                             case 7:
-                                //MenuFunciones::EncontrarCiudad(ArbolBinario);
+                                MenuFunciones::EncontrarCiudadABB(ArbolCiudades);
                                 break;
                             case 0:
                                 cout << "Volviendo al menu principal..." << endl;
@@ -380,14 +415,14 @@ Inicio:
                             case 4:
                                 MenuFunciones::ModificarInventarioAA(ArbolInventario);
                                 break;
-                            case 5:
+                            case 5:                               
                                 //MenuFunciones::ModificarClientesB(ArbolClientes);
                                 break;
                             case 6:
-                                //MenuFunciones::ModificarAdministrador(ArboAdministrador);
+                                //MenuFunciones::ModificarAdministradorB(ArboAdministrador);
                                 break;
                             case 7:
-                                //MenuFunciones::ModificarCiudad(ArbolBinario);
+                                MenuFunciones::ModificarCiudadABB(ArbolCiudades);
                                 break;
                             case 0:
                                 cout << "Volviendo al menu principal..." << endl;
@@ -411,7 +446,7 @@ Inicio:
             case 2:
                 MenuFuncionesAdmin::Facturar(ListaCompras);
             case 3:
-                //MenuFuncionesAdmin::RevisarGondolas(ListaCompras);
+                MenuFuncionesAdmin::RevisarGondolas(ListaCompras,ArbolInventario);
             case 4:
                 MenuFuncionesAdmin::VerificarIventario(ArbolInventario, ListaCompras);               
             case 5:
@@ -469,7 +504,7 @@ Inicio:
                         //BibliotecaReportesArboles::ReportarFacturaMayor( por determinar, no se);
                         break;
                     case 11:
-                        //BibliotecaReportesArboles::ReportarProductos(ArbolProds;
+                        //BibliotecaReportesArboles::ReportarProductos(ArbolProds);
                         break;
                     case 12:
                         //BibliotecaReportesArboles::ReportarClientes(ArbolB);
@@ -478,7 +513,7 @@ Inicio:
                         BibliotecaReportesArboles::ReportarPasillos(ArbolPasillos);
                         break;
                     case 14:
-                        //BibliotecaReportes::ReportarInventario(ArbolInventario);
+                        //BibliotecaReportesArboles::ReportarInventario(ArbolInventario); NO ESTA FUNCIONANDO
                         break;
                     case 0:
                         cout << "Volviendo al menu principal..." << endl;

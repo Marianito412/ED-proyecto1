@@ -221,8 +221,8 @@ void MenuFunciones::ModificarMarcaRN(ArbolRN* Arbol)
 void MenuFunciones::InsertarInventarioAA(ArbolAA* Arbol)
 {
     int CodPasillo, CodProd, CodMarca, CodInventario, Cantidad;
-    double Precio;
     string Nombre;
+    bool CanastaBasica;
 
     cout<<"Ingrese el codigo de pasillo: ";
     cin>>CodPasillo;
@@ -236,16 +236,16 @@ void MenuFunciones::InsertarInventarioAA(ArbolAA* Arbol)
     cout<<"Ingrese el codigo de inventario: ";
     cin>>CodInventario;
 
+    cout << "Ingrese el nombre: ";
+    cin >> Nombre;
+
     cout<<"Ingrese la cantidad: ";
     cin>>Cantidad;
 
-    cout<<"Ingrese el precio: ";
-    cin>>Precio;
+    cout << "Pertenece a la Canasta basica? true/false";
+    cin >> CanastaBasica;
 
-    cout<<"Ingrese el nombre: ";
-    cin>>Nombre;
-
-    string Linea = to_string(CodPasillo)+";"+to_string(CodProd)+";"+to_string(CodMarca)+";"+to_string(CodInventario)+";"+Nombre+";"+to_string(Cantidad)+";"+to_string(Precio);
+    string Linea = to_string(CodPasillo)+";"+to_string(CodProd)+";"+to_string(CodMarca)+";"+to_string(CodInventario)+";"+Nombre+";"+to_string(Cantidad)+";"+to_string(CanastaBasica);
     NodoInventario* NuevoInventario = new NodoInventario(Linea);
     Arbol->insert(NuevoInventario);
     NuevoInventario->Mostrar();
@@ -273,3 +273,200 @@ void MenuFunciones::ModificarInventarioAA(ArbolAA* Arbol)
 {
 }
 #pragma endregion 
+
+#pragma region Ciudades
+void MenuFunciones::InsertarCiudadABB(ArbolBinario* Arbol)
+{
+    int CodCiudad;
+    string NombreCiudad;
+
+    cout << "Ingrese el código de ciudad: ";
+    cin >> CodCiudad;
+
+    cout << "Ingrese el nombre de ciudad: ";
+    cin >> NombreCiudad;
+
+    if (Arbol->BuscarNodo(Arbol->Raiz, CodCiudad))
+    {
+        cout << "La ciudad ya existe" << endl;
+        return;
+    }
+
+    NodoCiudad* NuevaCiudad = new NodoCiudad(CodCiudad,NombreCiudad);
+    Arbol->InsertarNodo(NuevaCiudad);
+
+    cout << "Ciudad insertada exitosamente!" << endl;
+}
+
+void MenuFunciones::EncontrarCiudadABB(ArbolBinario* Arbol)
+{
+    int CodCiudad;
+
+    cout << "Ingrese el código de ciudad: ";
+    cin >> CodCiudad;
+
+    NodoBase* NodoEncontrado = Arbol->BuscarNodo(Arbol->Raiz, CodCiudad);
+
+    if (NodoCiudad* Ciudad = dynamic_cast<NodoCiudad*>(NodoEncontrado))
+    {
+        cout << "Ciudad encontrada!" << endl;
+        Ciudad->Mostrar();
+        return;
+    }
+    cout << "Ciudad no encontrada!" << endl;
+}
+
+void MenuFunciones::ModificarCiudadABB(ArbolBinario* Arbol)
+{
+    int CodCiudad;
+
+    cout << "Ingrese el código de ciudad: ";
+    cin >> CodCiudad;
+
+    NodoBase* NodoEncontrado = Arbol->BuscarNodo(Arbol->Raiz, CodCiudad);
+
+    if (NodoCiudad* Ciudad = dynamic_cast<NodoCiudad*>(NodoEncontrado))
+    {
+        cout << "Ciudad encontrada!" << endl;
+        Ciudad->Mostrar();
+
+        string Nombre;
+        cout << "Ingrese el nuevo nombre de la ciudad: ";
+        cin >> Nombre;
+
+        Ciudad->Nombre = Nombre;
+        Ciudad->Mostrar();
+        cout << "Ciudad actualizada correctamente" << endl;
+        return;
+    }
+    cout << "Ciudad no encontrada!" << endl;
+}
+#pragma endregion 
+
+
+//#pragma region Administrador
+//
+//void MenuFunciones::InsertarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+//{
+//    string LineaAdmin;
+//    cout << "Ingrese la siguiente información separada por ';'" << endl;
+//    cout << "Codigo de administrador, Nombre, Codigo de ciudad, Telefono, Correo" << endl;
+//    cin >> LineaAdmin;
+//
+//    NodoAdmin* Admin = new NodoAdmin(LineaAdmin);
+//    Arbol->InsertarNodo(Admin, Admin->CodAministrador);
+//    Arbol->Mostrar();
+//}
+//
+//void MenuFunciones::EncontrarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+//{
+//    int CodAdmin;
+//    cout << "Ingrese el código del administrador a buscar" << endl;
+//    cin >> CodAdmin;
+//
+//    NodoBase* Nodo = Arbol->BuscarNodo(CodAdmin);
+//    if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo)) {
+//        cout << "Se encontró el administrador: " << endl;
+//        Admin->Mostrar();
+//    }
+//    else {
+//        cout << "No se encontró el administrador solicitado" << endl;
+//    }
+//}
+//
+//void MenuFunciones::ModificarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+//{
+//    int CodAdmin;
+//    cout << "Ingrese el código del administrador a buscar" << endl;
+//    cin >> CodAdmin;
+//
+//    NodoBase* Nodo = Arbol->BuscarNodo(CodAdmin);
+//    if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo)) {
+//        cout << "Se encontró el administrador: " << endl;
+//        Admin->Mostrar();
+//    }
+//    else {
+//        cout << "No se encontró el administrador solicitado" << endl;
+//    }
+//}
+//
+//#pragma endregion
+//
+//#pragma region Cliente
+//
+//void MenuFunciones::InsertarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades,int totalClientes)
+//{
+//    string LineaCliente;
+//    cout << "Ingrese la siguiente información separada por ';'" << endl;
+//    cout << "Cedula;Nombre;Codigo de ciudad;Telefono;Correo" << endl;
+//    cin >> LineaCliente;
+//
+//    NodoCliente* Cliente = new NodoCliente(LineaCliente);
+//    Arbol->InsertarNodo(Cliente, Cliente->Cedula);
+//    Arbol->Mostrar();
+//}
+//void MenuFunciones::EncontrarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+//{
+//    int Cedula;
+//    cout << "Ingrese la cedula del cliente a buscar" << endl;
+//    cin >> Cedula;
+//
+//    NodoBase* Nodo = Arbol->BuscarNodo(Cedula);
+//    if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
+//        cout << "Se encontró el cliente: " << endl;
+//        Cliente->Mostrar();
+//    }
+//    else {
+//        cout << "No se encontró el cliente solicitado" << endl;
+//    }
+//}
+//void MenuFunciones::ModificarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+//{
+//    int Cedula;
+//    cout << "Ingrese la cedula del cliente a modificar" << endl;
+//    cin >> Cedula;
+//
+//    NodoBase* Nodo = Arbol->BuscarNodo(Cedula);
+//    if (!Nodo) {
+//        cout << "No se encontró el cliente con la cedula " << Cedula << endl;
+//        return;
+//    }
+//
+//    NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo);
+//    Cliente->Mostrar();
+//    string Nombre;
+//    int CodCiudad;
+//    int Telefono;
+//    string Correo;
+//
+//    cout << "Ingrese el nuevo nombre del cliente: ";
+//    cin >> Nombre;
+//    cout << "Ingrese el nuevo codigo de ciudad del cliente: ";
+//    cin >> CodCiudad;
+//    // Validar que la ciudad exista
+//    // Si la ciudad no existe, mostrar un mensaje de error y volver al menú
+//    if (!ListaCiudades->EncontrarPorPredicado([CodCiudad](NodoBase* Nodo)
+//        {
+//            if (NodoCiudad* Ciudad = dynamic_cast<NodoCiudad*>(Nodo))
+//            {
+//                return Ciudad->CodCiudad == CodCiudad;
+//            }
+//            return false;
+//        }))
+//    {
+//        cout << "La ciudad ingresada no existe." << endl;
+//        return;
+//    }
+//    cout << "Ingrese el nuevo telefono del cliente: ";
+//    cin >> Telefono;
+//    cout << "Ingrese el nuevo correo del cliente: ";
+//    cin >> Correo;
+//    Cliente->Nombre = Nombre;
+//    Cliente->CodCiudad = CodCiudad;
+//    Cliente->Telefono = Telefono;
+//    Cliente->Correo = Correo;
+//    Cliente->Mostrar();
+//    cout << "Datos actualizados exitosamente" << endl;
+//}
+//
+//#pragma endregion

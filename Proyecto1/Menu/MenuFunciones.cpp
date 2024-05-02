@@ -591,6 +591,144 @@ void MenuFunciones::ModificarAdministrador(TablaHash* TablaAdmins, ListaCircular
 }
 #pragma endregion 
 
+#pragma region Clientes
+void MenuFunciones::InsertarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades, int totalClientes)
+{
+    string LineaCliente;
+    cout << "Ingrese la siguiente información separada por ';'" << endl;
+    cout << "Cedula;Nombre;Codigo de ciudad;Telefono;Correo" << endl;
+    cin >> LineaCliente;
+
+    NodoCliente* Cliente = new NodoCliente(LineaCliente);
+    // Aplicar función de hashing
+    //int hash = (Cliente->Cedula % totalClientes) + 1;
+    TablaClientes->InsertarNodo(Cliente, Cliente->Cedula);
+    TablaClientes->Mostrar();
+}
+void MenuFunciones::EliminarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades) {
+    int Cedula;
+    cout << "Ingrese la cedula del cliente a eliminar" << endl;
+    cin >> Cedula;
+
+    // Buscar cliente por cedula
+    //int hash = (Cedula % 13) + 1;
+    TablaClientes->EliminarNodo(Cedula, [Cedula](NodoBase* Nodo) {
+        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
+            return Cliente->Cedula == Cedula;
+        }
+        return false;
+        });
+    TablaClientes->Mostrar();
+}
+void MenuFunciones::EncontrarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades) {
+    int Cedula;
+    cout << "Ingrese la cedula del cliente a buscar" << endl;
+    cin >> Cedula;
+
+    // Buscar cliente por cedula
+    NodoBase* Nodo = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo) {
+        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
+            return Cliente->Cedula == Cedula;
+        }
+        return false;
+        });
+
+    if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
+        cout << "Se encontró el cliente: " << endl;
+        Cliente->Mostrar();
+    }
+    else {
+        cout << "No se encontró el cliente solicitado" << endl;
+    }
+
+}
+void MenuFunciones::ModificarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades) {
+    int Cedula;
+    cout << "Ingrese la cedula del cliente a modificar" << endl;
+    cin >> Cedula;
+
+    // Buscar cliente por cedula
+    //int hash = (Cedula % 13) + 1;
+    NodoBase* Nodo = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo) {
+        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
+            return Cliente->Cedula == Cedula;
+        }
+        return false;
+        });
+
+    if (!dynamic_cast<NodoCliente*>(Nodo)) {
+        cout << "No se encontró el cliente con la cedula " << Cedula << endl;
+        return;
+    }
+
+    NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo);
+    Cliente->Mostrar();
+    string Nombre;
+    int CodCiudad;
+    int Telefono;
+    string Correo;
+
+    cout << "Ingrese el nuevo nombre del cliente: ";
+    cin >> Nombre;
+    cout << "Ingrese el nuevo codigo de ciudad del cliente: ";
+    cin >> CodCiudad;
+    // Validar que la ciudad exista
+    // Si la ciudad no existe, mostrar un mensaje de error y volver al menú
+    if (!ListaCiudades->EncontrarPorPredicado([CodCiudad](NodoBase* Nodo)
+        {
+            if (NodoCiudad* Ciudad = dynamic_cast<NodoCiudad*>(Nodo))
+            {
+                return Ciudad->CodCiudad == CodCiudad;
+            }
+            return false;
+        }))
+    {
+        cout << "La ciudad ingresada no existe." << endl;
+        return;
+    }
+    cout << "Ingrese el nuevo telefono del cliente: ";
+    cin >> Telefono;
+    cout << "Ingrese el nuevo correo del cliente: ";
+    cin >> Correo;
+    Cliente->Nombre = Nombre;
+    Cliente->CodCiudad = CodCiudad;
+    Cliente->Telefono = Telefono;
+    Cliente->Correo = Correo;
+    Cliente->Mostrar();
+    cout << "Datos actualizados exitosamente" << endl;
+}
+/*
+void MenuFunciones::GenerarReporteClientes(TablaHash* TablaClientes) {
+    lxw_workbook *workbook = workbook_new("Reporte_Clientes.xlsx");
+    lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
+
+    worksheet_write_string(worksheet, 0, 0, "Cedula", NULL);
+    worksheet_write_string(worksheet, 0, 1, "Nombre", NULL);
+    worksheet_write_string(worksheet, 0, 2, "Codigo de ciudad", NULL);
+    worksheet_write_string(worksheet, 0, 3, "Telefono", NULL);
+    worksheet_write_string(worksheet, 0, 4, "Correo", NULL);
+
+    int row = 1;
+    for (int i = 0; i < TablaHash::TAMANNO; ++i) {
+        ListaSimple* lista = TablaClientes->Tabla[i];
+        NodoBase* nodo = lista->Inicio;
+        while (nodo != nullptr) {
+            NodoCliente* cliente = dynamic_cast<NodoCliente*>(nodo);
+            worksheet_write_number(worksheet, row, 0, cliente->Cedula, NULL);
+            worksheet_write_string(worksheet, row, 1, cliente->Nombre.c_str(), NULL);
+            worksheet_write_number(worksheet, row, 2, cliente->CodCiudad, NULL);
+            worksheet_write_number(worksheet, row, 3, cliente->Telefono, NULL);
+            worksheet_write_string(worksheet, row, 4, cliente->Correo.c_str(), NULL);
+            nodo = nodo->Siguiente;
+            ++row;
+        }
+    }
+
+    workbook_close(workbook);
+    }
+*/
+#pragma endregion 
+
 #pragma region Marca
 void MenuFunciones::InsertarMarcaProducto(ListaDobleCircular* Lista, ListaSimple* ListaPasillos) {
     int codPasillo, codProducto, codMarca, cantidadGondola;
@@ -866,139 +1004,4 @@ void MenuFunciones:: ReporteCiudades(ListaCircular* ListaCiudades)
 */
 #pragma endregion
 
-#pragma region Clientes
-void MenuFunciones::InsertarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades, int totalClientes)
-    {
-     string LineaCliente;
-    cout << "Ingrese la siguiente información separada por ';'" << endl;
-    cout << "Cedula;Nombre;Codigo de ciudad;Telefono;Correo" << endl;
-    cin >> LineaCliente;
 
-    NodoCliente* Cliente = new NodoCliente(LineaCliente);
-    // Aplicar función de hashing
-    //int hash = (Cliente->Cedula % totalClientes) + 1;
-    TablaClientes->InsertarNodo(Cliente, Cliente->Cedula);
-    TablaClientes->Mostrar();
-    }
-void MenuFunciones::EliminarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades){
-    int Cedula;
-    cout << "Ingrese la cedula del cliente a eliminar" << endl;
-    cin >> Cedula;
-
-    // Buscar cliente por cedula
-    //int hash = (Cedula % 13) + 1;
-    TablaClientes->EliminarNodo(Cedula, [Cedula](NodoBase* Nodo) {
-        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
-            return Cliente->Cedula == Cedula;
-        }
-        return false;
-    });
-    TablaClientes->Mostrar();
-}
-void MenuFunciones::EncontrarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades){
-    int Cedula;
-    cout << "Ingrese la cedula del cliente a buscar" << endl;
-    cin >> Cedula;
-
-    // Buscar cliente por cedula
-    NodoBase* Nodo = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo) {
-        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
-            return Cliente->Cedula == Cedula;
-        }
-        return false;
-    });
-
-    if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
-        cout << "Se encontró el cliente: " << endl;
-        Cliente->Mostrar();
-    } else {
-        cout << "No se encontró el cliente solicitado" << endl;
-    }
-
-}
-void MenuFunciones::ModificarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades){
-    int Cedula;
-    cout << "Ingrese la cedula del cliente a modificar" << endl;
-    cin >> Cedula;
-
-    // Buscar cliente por cedula
-    //int hash = (Cedula % 13) + 1;
-    NodoBase* Nodo = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo) {
-        if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo)) {
-            return Cliente->Cedula == Cedula;
-        }
-        return false;
-    });
-
-    if (!dynamic_cast<NodoCliente*>(Nodo)) {
-        cout << "No se encontró el cliente con la cedula " << Cedula << endl;
-        return;
-    }
-
-    NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo);
-    Cliente->Mostrar();
-    string Nombre;
-    int CodCiudad;
-    int Telefono;
-    string Correo;
-
-    cout << "Ingrese el nuevo nombre del cliente: ";
-    cin >> Nombre;
-    cout << "Ingrese el nuevo codigo de ciudad del cliente: ";
-    cin >> CodCiudad;
-    // Validar que la ciudad exista
-    // Si la ciudad no existe, mostrar un mensaje de error y volver al menú
-    if (!ListaCiudades->EncontrarPorPredicado([CodCiudad](NodoBase* Nodo)
-    {
-        if (NodoCiudad* Ciudad = dynamic_cast<NodoCiudad*>(Nodo))
-        {
-            return Ciudad->CodCiudad == CodCiudad;
-        }
-        return false;
-    }))
-    {
-        cout << "La ciudad ingresada no existe." << endl;
-        return;
-    }
-    cout << "Ingrese el nuevo telefono del cliente: ";
-    cin >> Telefono;
-    cout << "Ingrese el nuevo correo del cliente: ";
-    cin >> Correo;
-    Cliente->Nombre = Nombre;
-    Cliente->CodCiudad = CodCiudad;
-    Cliente->Telefono = Telefono;
-    Cliente->Correo = Correo;
-    Cliente->Mostrar();
-    cout << "Datos actualizados exitosamente" << endl;
-}
-/*
-void MenuFunciones::GenerarReporteClientes(TablaHash* TablaClientes) {
-    lxw_workbook *workbook = workbook_new("Reporte_Clientes.xlsx");
-    lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
-
-    worksheet_write_string(worksheet, 0, 0, "Cedula", NULL);
-    worksheet_write_string(worksheet, 0, 1, "Nombre", NULL);
-    worksheet_write_string(worksheet, 0, 2, "Codigo de ciudad", NULL);
-    worksheet_write_string(worksheet, 0, 3, "Telefono", NULL);
-    worksheet_write_string(worksheet, 0, 4, "Correo", NULL);
-
-    int row = 1;
-    for (int i = 0; i < TablaHash::TAMANNO; ++i) {
-        ListaSimple* lista = TablaClientes->Tabla[i];
-        NodoBase* nodo = lista->Inicio;
-        while (nodo != nullptr) {
-            NodoCliente* cliente = dynamic_cast<NodoCliente*>(nodo);
-            worksheet_write_number(worksheet, row, 0, cliente->Cedula, NULL);
-            worksheet_write_string(worksheet, row, 1, cliente->Nombre.c_str(), NULL);
-            worksheet_write_number(worksheet, row, 2, cliente->CodCiudad, NULL);
-            worksheet_write_number(worksheet, row, 3, cliente->Telefono, NULL);
-            worksheet_write_string(worksheet, row, 4, cliente->Correo.c_str(), NULL);
-            nodo = nodo->Siguiente;
-            ++row;
-        }
-    }
-
-    workbook_close(workbook);
-    }
-*/
-#pragma endregion 

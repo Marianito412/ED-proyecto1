@@ -57,6 +57,10 @@ public:
     static void EliminarAdministrador(TablaHash* TablaAdmins, ListaCircular* ListaCiudades);
     static void EncontrarAdministrador(TablaHash* TablaAdmins, ListaCircular* ListaCiudades);
     static void ModificarAdministrador(TablaHash* TablaAdmins, ListaCircular* ListaCiudades);
+
+    /*static void InsertarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);
+    static void EncontrarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);
+    static void ModificarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);*/
 #pragma endregion 
 
 #pragma region Marca
@@ -75,6 +79,10 @@ public:
     static void EliminarCiudad(ListaCircular* ListaCiudades);
     static void EncontrarCiudad(ListaCircular* ListaCiudades);
     static void ModificarCiudad(ListaCircular* ListaCiudades);
+
+    static void InsertarCiudadABB(ArbolBinario* Arbol);
+    static void EncontrarCiudadABB(ArbolBinario* Arbol);
+    static void ModificarCiudadABB(ArbolBinario* Arbol);
 #pragma endregion
 
 #pragma region Clientes
@@ -82,5 +90,9 @@ public:
     static void EliminarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades);
     static void EncontrarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades);
     static void ModificarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades);
+
+    /*static void InsertarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades,int totalClientes);
+    static void EncontrarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades);
+    static void ModificarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades);*/
 #pragma endregion 
 };

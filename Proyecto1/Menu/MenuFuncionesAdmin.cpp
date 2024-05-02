@@ -88,4 +88,33 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
     ListaCompras->BorrarInicio();
 }
 
+void MenuFuncionesAdmin::RevisarGondolas(ListaSimple* ListaVentas, ArbolAA* ArbolInventario)
+{
+    // Iterar sobre la lista de ventas
+    ListaVentas->IterarNodos([&](NodoBase* Nodo)
+        {
+            // Verificar si el nodo es un NodoCompra
+            if (NodoCompra* Venta = dynamic_cast<NodoCompra*>(Nodo))
+            {
+                // Verificar si la cantidad vendida es menor o igual a 2
+                if (Venta->Cantidad <= 2)
+                {
+                    // Obtener el nodo de inventario correspondiente
+                    NodoInventario* Inventario = Venta->RefInventario;
+
+                    // Verificar si hay suficiente stock en inventario
+                    if (Inventario->Inventario >= 20)
+                    {
+                        // Ajustar la cantidad en inventario y mostrar mensaje
+                        Inventario->Inventario -= 20;
+                        std::cout << "Se han ajustado las góndolas para el producto: " << Inventario->Nombre << std::endl;
+                    }
+                    else
+                    {
+                        std::cout << "No hay suficiente stock en inventario para ajustar las góndolas del producto: " << Inventario->Nombre << std::endl;
+                    }
+                }
+            }
+        });
+}
 
