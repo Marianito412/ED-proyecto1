@@ -7,41 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a2e0685-6021-4c27-b05b-3d8d5c2e429f" name="Changes" comment="Funciones clientes">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCarrito.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCarrito.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/BibliotecaReportesArboles.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesAdmin.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesCliente.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCarrito.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCompra.obj" afterDir="false" />
+    <list default="true" id="0a2e0685-6021-4c27-b05b-3d8d5c2e429f" name="Changes" comment="Faltó esto">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolAA/ArbolAA.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolAA/ArbolAA.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/Proyecto1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Proyecto1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Proyecto1.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Proyecto1.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAA.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAA.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAVL.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAVL.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolBinario.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolBinario.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolRN.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolRN.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFunciones.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFunciones.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesArboles.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesArboles.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoProducto.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoProducto.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesAdmin.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesAdmin.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesCliente.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesCliente.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCompra.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCompra.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/Cl.items.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Proyecto1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Proyecto1.exe" afterDir="false" />
@@ -86,7 +66,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "C++ Project.Proyecto1.executor": "Debug",
+    "C++ Project.Proyecto1.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Mariano",
@@ -191,7 +171,7 @@
       <workItem from="1714322578495" duration="3570000" />
       <workItem from="1714527989490" duration="5568000" />
       <workItem from="1714535378932" duration="1907000" />
-      <workItem from="1714605604020" duration="11775000" />
+      <workItem from="1714605604020" duration="16000000" />
     </task>
     <task id="LOCAL-00001" summary="Agregar clases de estructuras de datos">
       <option name="closed" value="true" />
@@ -401,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714623269785</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Faltó esto">
+      <option name="closed" value="true" />
+      <created>1714623295750</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714623295750</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,10 +434,10 @@
     <MESSAGE value="Falto esto" />
     <MESSAGE value="Init" />
     <MESSAGE value="Consultar precio" />
-    <MESSAGE value="Faltó esto" />
     <MESSAGE value="Consulta de productos" />
     <MESSAGE value="Funciones clientes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funciones clientes" />
+    <MESSAGE value="Faltó esto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Faltó esto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -55,6 +55,11 @@ void MenuFuncionesCliente::ConsultarDescuento()
         }
     }
 
+    if (Cuenta == 0)
+    {
+        cout<<"Esta cedula no tiene facturas registradas\n";
+        return;
+    }
     if (Cuenta<=3)
     {
         cout<<"Usted no posee descuento\n";
@@ -120,12 +125,11 @@ void MenuFuncionesCliente::Comprar(ListaSimple*& ListaCarritos, ArbolBinario* Pa
         }
         NodoCarrito* Carrito = dynamic_cast<NodoCarrito*>(Nodo);
         NodoInventario* RefInventario = dynamic_cast<NodoInventario*>(ArbolInventario->Encontrar(CodigoInventario));
-        Carrito->Compras->InsertarFinal(new NodoCompra(Pasillo, Producto, Marca, Cantidad, CodigoInventario, RefInventario));
+        RefInventario->Cantidad = RefInventario->Cantidad-Cantidad;
+        Carrito->Compras->InsertarFinal(new NodoCompra(Pasillo, Producto, Marca, Cantidad, CodigoInventario, dynamic_cast<NodoMarca*>(Marcas->BusquedaM(Marca))->Precio, RefInventario));
         
         int Continuacion;
         Carrito->Compras->Mostrar();
-
-        
         
         cout<<"Desea comprar mas? (1: Si, 2:NO): ";
         cin>>Continuacion;

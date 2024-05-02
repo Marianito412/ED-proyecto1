@@ -21,6 +21,7 @@
 #include "Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h"
 #include "Estructuras/TablaHash/TablaHash.h"
 #include "Menu/MenuFunciones.h"
+#include "Menu/MenuFuncionesAdmin.h"
 #include "Menu/MenuFuncionesCliente.h"
 
 static const string DIRECTORIO = "../Archivos/";
@@ -227,6 +228,8 @@ int main()
     ArbolBinario* ArbolCiudades = CargarCiudadesABB("Ciudades.txt");
     ArbolCiudades->Infijo(ArbolCiudades->Raiz);
 
+Inicio:
+    
     bool Exito;
     bool EsAdmin = MenuFunciones::Login(TablaAdmins, TablaClientes, Exito);
     int opcion, subopcion1;
@@ -583,7 +586,10 @@ int main()
                 }while (subopcion1 != 0);
                 break;
             case 9:
-                
+                MenuFuncionesAdmin::Facturar(ListaCompras);
+            case 10:
+            case 11:
+                MenuFuncionesAdmin::VerificarIventario(ArbolInventario, ListaCompras);
             case 0:
                 cout << "Saliendo del programa..." << endl;
                 break;
@@ -617,15 +623,30 @@ int main()
                 MenuFuncionesCliente::ConsultarPrecio(ArbolMarcas);
                 break;
             case 2:
-
+                cout << "Consultar Descuento:" << endl;
+                if (Exito)
+                {
+                    MenuFuncionesCliente::ConsultarDescuento();    
+                }else
+                {
+                    cout<<"Debe estar logueado para usar esta opcion\n";
+                }
+                
                 break;
             case 3:
                 cout << "Consultar Productos: " << endl;
                 MenuFuncionesCliente::ConsultarProductos(ArbolProds);
                 break;
             case 4:
-                MenuFuncionesCliente::Comprar(ListaCompras, ArbolPasillos, ArbolProds, ArbolMarcas, ArbolInventario,
-                                              TablaClientes);
+                cout << "Comprar: " << endl;
+                if (Exito)
+                {
+                    MenuFuncionesCliente::Comprar(ListaCompras, ArbolPasillos, ArbolProds, ArbolMarcas, ArbolInventario,
+                                                  TablaClientes);    
+                }else
+                {
+                    cout<<"Debe estar logueado para usar esta opcion\n";
+                }
                 break;
             case 9:
                 cout << "Saliendo del programa..." << endl;
@@ -638,7 +659,15 @@ int main()
         }
         while (opcion != 9);
     }
-
+    int Reingresar = 0;
+    cout<<"Desea reingresar al sistema? (1: Sí, 2: No): ";
+    cin>>Reingresar;
+    if (Reingresar == 1)
+    {
+        goto Inicio;    
+    }
+    
+    cout<<"Adios!\n";
     return 0;
     
     //Menu();
