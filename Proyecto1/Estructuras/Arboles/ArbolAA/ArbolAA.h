@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 #include <iostream>
 
 #include "../../Nodos/NodoBase.h"
@@ -85,6 +86,19 @@ public:
         Infijo(Nodo->Izquierda);
         Nodo->Mostrar();
         Infijo(Nodo->Derecha);
+    }
+
+    void IterarNodos(std::function<void(NodoBase*)> func)
+    {
+        IterarNodosAux(root, func);
+    }
+    void IterarNodosAux(NodoBase* Nodo, std::function<void(NodoBase*)> func)
+    {
+        if (!Nodo) return;
+        
+        IterarNodosAux(Nodo->Izquierda, func);
+        func(Nodo);
+        IterarNodosAux(Nodo->Derecha, func);
     }
 
     void print(NodoBase* temp) {

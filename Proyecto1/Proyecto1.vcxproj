@@ -168,6 +168,8 @@
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Administrador\NodoAdmin.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Ciudad\NodoCiudad.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Clientes\NodoCliente.cpp" />
+    <ClCompile Include="Estructuras\Nodos\NodosDerivados\Compra\NodoCarrito.cpp" />
+    <ClCompile Include="Estructuras\Nodos\NodosDerivados\Compra\NodoCompra.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Inventario\NodoInventario.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Marca\NodoMarca.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Pasillo\NodoPasillo.cpp" />
@@ -175,6 +177,7 @@
     <ClCompile Include="Estructuras\TablaHash\TablaHash.cpp" />
     <ClCompile Include="LectorArchivos\LectorArchivos.cpp" />
     <ClCompile Include="Menu\MenuFunciones.cpp" />
+    <ClCompile Include="Menu\MenuFuncionesAdmin.cpp" />
     <ClCompile Include="Menu\MenuFuncionesArboles.cpp" />
     <ClCompile Include="Menu\MenuFuncionesCliente.cpp" />
     <ClCompile Include="Proyecto1.cpp" />
@@ -194,6 +197,8 @@
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Administrador\NodoAdmin.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Ciudad\NodoCiudad.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Clientes\NodoCliente.h" />
+    <ClInclude Include="Estructuras\Nodos\NodosDerivados\Compra\NodoCarrito.h" />
+    <ClInclude Include="Estructuras\Nodos\NodosDerivados\Compra\NodoCompra.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Inventario\NodoInventario.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Marca\NodoMarca.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Pasillo\NodoPasillo.h" />
@@ -201,6 +206,7 @@
     <ClInclude Include="Estructuras\TablaHash\TablaHash.h" />
     <ClInclude Include="LectorArchivos\LectorArchivos.h" />
     <ClInclude Include="Menu\MenuFunciones.h" />
+    <ClInclude Include="Menu\MenuFuncionesAdmin.h" />
     <ClInclude Include="Menu\MenuFuncionesCliente.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
