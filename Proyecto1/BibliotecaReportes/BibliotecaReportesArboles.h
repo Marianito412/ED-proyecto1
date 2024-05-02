@@ -10,6 +10,7 @@ public:
     static void ReportarPasilloMasVisitado(ArbolBinario* Arbol);
     static void ReportarPasilloMenosVisitado(ArbolBinario* Arbol);
     static void ReportarPasillos(ArbolBinario* Arbol);
+    static void ReportarInventario(ArbolAA* Arbol);
 
     //static void ReportarProductoMasVendido(ArbolAVL* Arbol);
     //static void ReportarMarcaMasVendido(ArbolRN* Arbol);
@@ -21,5 +22,5 @@ public:
     //static void ReportarFacturaMayor(por determinar, no se );
     //static void ReportarProductos(ArbolAVL* Arbol);
     //static void ReportarClientes(ArbolB* Arbol);
-    //static void ReportarInventario(ArbolAA* Arbol);
+    
 };

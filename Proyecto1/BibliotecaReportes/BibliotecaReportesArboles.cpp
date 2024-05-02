@@ -1,6 +1,7 @@
 #include "BibliotecaReportesArboles.h"
 #include "../Estructuras/Nodos/NodoBase.h"
 #include "../Estructuras/Nodos/NodosDerivados/Pasillo/NodoPasillo.h"
+#include "../Estructuras/Nodos/NodosDerivados/Inventario/NodoInventario.h"
 #include <fstream>
 #include <string>
 
@@ -72,6 +73,28 @@ void BibliotecaReportesArboles::ReportarPasillos(ArbolBinario* Arbol)
             {
                 // Escribe los datos del pasillo en el reporte
                 Reporte << Pasillo->Codigo << "," << Pasillo->Nombre << "\n";
+            }
+        });
+
+    Reporte.close();
+}
+
+void BibliotecaReportesArboles::ReportarInventario(ArbolAA* Arbol)
+{
+    std::ofstream Reporte("../Reportes/ReporteInventario.csv");
+
+    // Encabezado del reporte
+    Reporte << "Codigo Pasillo,Codigo Producto,Codigo Marca,Codigo Inventario,Nombre,Cantidad,Precio\n";
+
+    // Función lambda para iterar sobre los nodos del árbol y escribir los datos del inventario en el reporte
+    Arbol->IterarNodos([&](NodoBase* Nodo)
+        {
+            if (NodoInventario* Inventario = dynamic_cast<NodoInventario*>(Nodo))
+            {
+                // Escribe los datos del inventario en el reporte
+                Reporte << Inventario->Pasillo << "," << Inventario->Producto << ","
+                    << Inventario->Marca << "," << Inventario->Inventario << ","
+                    << Inventario->Nombre << "," << Inventario->Cantidad << "\n";
             }
         });
 
