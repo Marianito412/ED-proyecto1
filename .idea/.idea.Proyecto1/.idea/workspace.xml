@@ -7,13 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a2e0685-6021-4c27-b05b-3d8d5c2e429f" name="Changes" comment="">
+    <list default="true" id="0a2e0685-6021-4c27-b05b-3d8d5c2e429f" name="Changes" comment="Funciones clientes">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCarrito.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCarrito.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/BibliotecaReportesArboles.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesAdmin.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesCliente.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCarrito.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCompra.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolAA/ArbolAA.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolAA/ArbolAA.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.cpp" afterDir="false" />
@@ -64,6 +70,9 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/include/string" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Usuario/Desktop/ED-proyecto1/Proyecto1/Estructuras/Arboles/ArbolAA/ArbolAA.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Usuario/Desktop/ED-proyecto1/Proyecto1/Menu/MenuFuncionesCliente.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Usuario/Desktop/ED-proyecto1/Proyecto1/Menu/MenuFuncionesCliente.h" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -182,7 +191,7 @@
       <workItem from="1714322578495" duration="3570000" />
       <workItem from="1714527989490" duration="5568000" />
       <workItem from="1714535378932" duration="1907000" />
-      <workItem from="1714605604020" duration="10847000" />
+      <workItem from="1714605604020" duration="11775000" />
     </task>
     <task id="LOCAL-00001" summary="Agregar clases de estructuras de datos">
       <option name="closed" value="true" />
@@ -384,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714536689193</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Funciones clientes">
+      <option name="closed" value="true" />
+      <created>1714623269785</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714623269785</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +448,8 @@
     <MESSAGE value="Consultar precio" />
     <MESSAGE value="Faltó esto" />
     <MESSAGE value="Consulta de productos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consulta de productos" />
+    <MESSAGE value="Funciones clientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funciones clientes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
