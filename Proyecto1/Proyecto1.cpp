@@ -238,18 +238,12 @@ Inicio:
     {
         do {
             // Mostrar el menú principal
-            cout << "Menu:" << endl;
-            cout << "1. Pasillo" << endl;
-            cout << "2. Producto" << endl;
-            cout << "3. Marca" << endl;
-            cout << "4. Inventario" << endl;
-            cout << "5. Clientes" << endl;
-            cout << "6. Administrador" << endl;
-            cout << "7. Ciudad" << endl;
-            cout << "8. Reportes" << endl;
-            cout << "9. Facturar" << endl;
-            cout << "10. Revisar gondolas" << endl;
-            cout << "11. Verificar inventario" << endl;
+            cout << " ===== Menu Administrador =====" << endl;
+            cout << "1. Mantenimiento de Bases de datos" << endl;
+            cout << "2. Facturar" << endl;
+            cout << "3. Revisar Gondolas" << endl;
+            cout << "4. Vericar inventario" << endl;
+            cout << "5. Reportes" << endl;
             cout << "0. Salir" << endl;
             // Solicitar al usuario que ingrese una opción
             cout << "Ingrese el numero de opcion: ";
@@ -260,341 +254,246 @@ Inicio:
             switch (opcion) {
             case 1:
                 do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Pasillo:" << endl;
-                    cout << "1. Insertar" << endl;
-                    cout << "2. Eliminar" << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
+                    cout << "===== Mantenimiento de la Base de Datos ======" << endl;
+                    cout << "1. Insercion" << endl;
+                    cout << "2. Busqueda" << endl;
+                    cout << "3. Modificar" << endl;
                     cout << "0. Atras" << endl;
-
-                    cout << "Ingrese el numero de subopcion: ";
+                    cout << "Ingrese el numero de opcion: ";
                     cin >> subopcion1;
                     system("CLS");
-                    
                     switch (subopcion1) {
                     case 1:
-                        //MenuFunciones::InsertarPasillo(ListaPasillos);
-                        MenuFunciones::InsertarPasilloABB(ArbolPasillos);
+                        do {
+                            cout << "===== Inserciones ======" << endl;
+                            cout << "1. Pasillo" << endl;
+                            cout << "2. Producto" << endl;
+                            cout << "3. Marca" << endl;
+                            cout << "4. Inventario" << endl;
+                            cout << "5. Clientes" << endl;
+                            cout << "6. Administrador" << endl;
+                            cout << "7. Ciudad" << endl;
+                            cout << "0. Atras" << endl;
+                            cout << "Ingrese el numero de opcion: ";
+                            cin >> subopcion1;
+                            system("CLS");
+                            switch (subopcion1) {
+                            case 1:
+                                MenuFunciones::InsertarPasilloABB(ArbolPasillos);
+                                break;
+                            case 2:
+                                MenuFunciones::InsertarProductoAVL(ArbolProds);
+                                break;
+                            case 3:
+                                MenuFunciones::InsertarMarcaRN(ArbolMarcas);
+                                break;
+                            case 4:
+                                MenuFunciones::InsertarInventarioAA(ArbolInventario);
+                                break;
+                            case 5:
+                                //MenuFunciones::InsertarClientesB(ArbolClientes);
+                                break;
+                            case 6:
+                                //MenuFunciones::InsertarAdministrador(ArboAdministrador);
+                                break;
+                            case 7:
+                                //MenuFunciones::InsertarCiudad(ArbolCiudades);
+                                break;
+                            case 0:
+                                cout << "Volviendo al menu principal..." << endl;
+                                break;
+                            default:
+                                cout << "Subopcion no válida. Por favor ingresa un número del 1 al 7." << endl;
+                                break;
+                            }
+                        } while (subopcion1 != 0);
                         break;
                     case 2:
-                        //MenuFunciones::EliminarPasillo(ListaPasillos);
+                        do {
+                            cout << "===== Busqueda ======" << endl;
+                            cout << "1. Pasillo" << endl;
+                            cout << "2. Producto" << endl;
+                            cout << "3. Marca" << endl;
+                            cout << "4. Inventario" << endl;
+                            cout << "5. Clientes" << endl;
+                            cout << "6. Administrador" << endl;
+                            cout << "7. Ciudad" << endl;
+                            cout << "0. Atras" << endl;
+                            cout << "Ingrese el numero de opcion: ";
+                            cin >> subopcion1;
+                            system("CLS");
+                            switch (subopcion1) {
+                            case 1:
+                                MenuFunciones::BuscarPasilloABB(ArbolPasillos);
+                                break;
+                            case 2:
+                                MenuFunciones::BuscarProductoAVL(ArbolProds);
+                                break;
+                            case 3:
+                                MenuFunciones::EncontrarMarcaRN(ArbolMarcas);
+                                break;
+                            case 4:
+                                MenuFunciones::EncontrarInventarioAA(ArbolInventario);
+                                break;
+                            case 5:
+                                //MenuFunciones::EncontrarClientesB(ArbolClientes);
+                                break;
+                            case 6:
+                                //MenuFunciones::EncontrarAdministrador(ArboAdministrador);
+                                break;
+                            case 7:
+                                //MenuFunciones::EncontrarCiudad(ArbolBinario);
+                                break;
+                            case 0:
+                                cout << "Volviendo al menu principal..." << endl;
+                                break;
+                            default:
+                                cout << "Subopcion no válida. Por favor ingresa un número del 1 al 7." << endl;
+                                break;
+                            }
+                        } while (subopcion1 != 0);
                         break;
                     case 3:
-                        MenuFunciones::BuscarPasilloABB(ArbolPasillos);
-                        //MenuFunciones::BuscarPasillo(ListaPasillos);
-                        break;
-                    case 4:
-                        MenuFunciones::ModificarPasilloABB(ArbolPasillos);
-                        //MenuFunciones::ModificarPasillo(ListaPasillos);
-                        break;
-                    case 5:
-                        //BibliotecaReportes::ReportarPasillos(ListaPasillos);
+                        do {
+                            cout << "===== Modificaciones ======" << endl;
+                            cout << "1. Pasillo" << endl;
+                            cout << "2. Producto" << endl;
+                            cout << "3. Marca" << endl;
+                            cout << "4. Inventario" << endl;
+                            cout << "5. Clientes" << endl;
+                            cout << "6. Administrador" << endl;
+                            cout << "7. Ciudad" << endl;
+                            cout << "0. Atras" << endl;
+                            cout << "Ingrese el numero de opcion: ";
+                            cin >> subopcion1;
+                            system("CLS");
+                            switch (subopcion1) {
+                            case 1:
+                                MenuFunciones::ModificarPasilloABB(ArbolPasillos);
+                                break;
+                            case 2:
+                                MenuFunciones::ModificarProductoAVL(ArbolProds);
+                                break;
+                            case 3:
+                                MenuFunciones::ModificarMarcaRN(ArbolMarcas);
+                                break;
+                            case 4:
+                                MenuFunciones::ModificarInventarioAA(ArbolInventario);
+                                break;
+                            case 5:
+                                //MenuFunciones::ModificarClientesB(ArbolClientes);
+                                break;
+                            case 6:
+                                //MenuFunciones::ModificarAdministrador(ArboAdministrador);
+                                break;
+                            case 7:
+                                //MenuFunciones::ModificarCiudad(ArbolBinario);
+                                break;
+                            case 0:
+                                cout << "Volviendo al menu principal..." << endl;
+                                break;
+                            default:
+                                cout << "Subopcion no válida. Por favor ingresa un número del 1 al 7." << endl;
+                                break;
+                            }
+                        } while (subopcion1 != 0);
                         break;
                     case 0:
-                        cout << "Volviendo al menu principal..." << endl;
+                        cout << "Saliendo del programa..." << endl;
                         break;
                     default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
+                        cout << "Opción no válida. Por favor ingresa un número del 1 al 8." << endl;
                         break;
                     }
-                } while (subopcion1 != 0);
-                break;
+                    system("CLS");
+                }while (opcion != 3);
+
             case 2:
-                do {
-                    cout << "Producto:" << endl;
-                    cout << "1. Insertar" << endl;
-                    cout << "2. Eliminar" << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-
-                    switch (subopcion1)
-                    {
-                    case 1:
-                        MenuFunciones::InsertarProductoAVL(ArbolProds);
-                        //MenuFunciones::InsertarProducto(ListaProds, ListaPasillos);
-                        break;
-                    case 2:
-                        //MenuFunciones::EliminarProducto(ListaProds, ListaMarcas);
-                        break;
-                    case 3:
-                        MenuFunciones::BuscarProductoAVL(ArbolProds);
-                        //MenuFunciones::BuscarProducto(ListaProds, ListaPasillos);
-                        break;
-                    case 4:
-                        MenuFunciones::ModificarProductoAVL(ArbolProds);
-                        //MenuFunciones::ModificarProducto(ListaProds, ListaPasillos);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
-                break;
+                MenuFuncionesAdmin::Facturar(ListaCompras);
             case 3:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Marca:" << endl;
-                    cout << "1. Insertar" << endl;
-                    cout << "2. Eliminar" << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        MenuFunciones::InsertarMarcaRN(ArbolMarcas);
-                        //MenuFunciones::InsertarMarcaProducto(ListaMarcas, ListaPasillos);
-                        break;
-                    case 2:
-                        //MenuFunciones::EliminarMarcaProducto(ListaMarcas);
-                        break;
-                    case 3:
-                        MenuFunciones::EncontrarMarcaRN(ArbolMarcas);
-                        //MenuFunciones::EncontrarMarcaProducto(ListaMarcas);
-                        break;
-                    case 4:
-                        MenuFunciones::ModificarMarcaRN(ArbolMarcas);
-                        //MenuFunciones::ModificarMarcaProducto(ListaMarcas);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
-                break;
+                //MenuFuncionesAdmin::RevisarGondolas(ListaCompras);
             case 4:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Inventario:" << endl;
-                    cout << "1. Insertar" << endl;
-                    cout << "2. Eliminar" << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        MenuFunciones::InsertarInventarioAA(ArbolInventario);
-                        //MenuFunciones::InsertarInventario(ListaInventario, ListaPasillos, ListaProds, ListaMarcas);
-                        break;
-                    case 2:
-                        //MenuFunciones::EliminarInventario(ListaInventario);
-                        break;
-                    case 3:
-                        MenuFunciones::EncontrarInventarioAA(ArbolInventario);
-                        //MenuFunciones::BuscarInventario(ListaInventario);
-                        break;
-                    case 4:
-                        //MenuFunciones::ModificarInventario(ListaInventario);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
-                break;
+                MenuFuncionesAdmin::VerificarIventario(ArbolInventario, ListaCompras);               
             case 5:
                 do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Cliente:" << endl;
-                    cout << "1. Insertar" << endl;
-                    cout << "2. Eliminar" << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
+                    cout << "===== Reportes =====" << endl;
+                    cout << "1. Pasillos mas visitado" << endl;
+                    cout << "2. Pasillo menos visitado" << endl;
+                    cout << "3. Producto por pasillo mas vendidos" << endl;
+                    cout << "4. Marcas mas vendidas" << endl;
+                    cout << "5. Cliente que mas compro" << endl;
+                    cout << "6. Cliente que menos compro" << endl;
+                    cout << "7. Producto mas cargado en Gondolas" << endl;
+                    cout << "8. Cliente que mas facturo" << endl;
+                    cout << "9. Marcas de un producto" << endl;
+                    cout << "10. Factura de mayor monto" << endl;
+                    cout << "11. Productos de un pasillo" << endl;
+                    cout << "12. Clientes del supermercado" << endl;
+                    cout << "13. Pasillo del supermercado" << endl;
+                    cout << "14. Inverntario del supermercado" << endl;
                     cout << "0. Atras" << endl;
-    
+
                     cout << "Ingrese el numero de subopcion: ";
                     cin >> subopcion1;
                     system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        //MenuFunciones::InsertarClientes(TablaClientes, ListaCiudades, 0);
-                        break;
-                    case 2:
-                        //MenuFunciones::EliminarClientes(TablaClientes, ListaCiudades);
-                        break;
-                    case 3:
-                        //MenuFunciones::EncontrarClientes(TablaClientes, ListaCiudades);
-                        break;
-                    case 4:
-                        //MenuFunciones::ModificarClientes(TablaClientes, ListaCiudades);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
-                break;
-            case 6:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Administrador:" << endl;
-                    cout << "1. Insertar" << endl;
-                    cout << "2. Eliminar" << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        //MenuFunciones::InsertarAdministrador(TablaAdmins, ListaCiudades);
-                        break;
-                    case 2:
-                        //MenuFunciones::EliminarAdministrador(TablaAdmins, ListaCiudades);
-                        break;
-                    case 3:
-                        //MenuFunciones::EncontrarAdministrador(TablaAdmins, ListaCiudades);
-                        break;
-                    case 4:
-                        //MenuFunciones::ModificarAdministrador(TablaAdmins, ListaCiudades);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
-                break;
-            case 7:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Ciudad:" << endl;
-                    cout << "1. Insertar " << endl;
-                    cout << "2. Eliminar " << endl;
-                    cout << "3. Buscar" << endl;
-                    cout << "4. Modificar" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
-                    switch (subopcion1) {
-                    case 1:
-                        //MenuFunciones:: InsertarCiudad(ListaCiudades);
-                        break;
-                    case 2:
-                        //MenuFunciones:: EliminarCiudad(ListaCiudades);
-                        break;
-                    case 3:
-                        //MenuFunciones::EncontrarCiudad(ListaCiudades);
-                        break;
-                    case 4:
-                        //MenuFunciones::ModificarCiudad(ListaCiudades);
-                        break;
-                    case 0:
-                        cout << "Volviendo al menu principal..." << endl;
-                        break;
-                    default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 4." << endl;
-                        break;
-                    }
-                } while (subopcion1 != 0);
-                break;
-            case 8:
-                do {
-                    // Mostrar submenú para la opción 1
-                    cout << "Reportes" << endl;
-                    cout << "1. Reporte Pasillos" << endl;
-                    cout << "2. Reporte Productos pasillo" << endl;
-                    cout << "3. Reporte Marcas Producto" << endl;
-                    cout << "4. Reporte Administradores" << endl;
-                    cout << "5. Reporte Clientes" << endl;
-                    cout << "6. Reporte Ciudades" << endl;
-                    cout << "7. Reporte Pasillo mas visitado" << endl;
-                    cout << "8. Reporte Pasillo menos visitado" << endl;
-                    cout << "9. Reporte Producto mas buscado" << endl;
-                    cout << "10. Reporte Marca mas buscada" << endl;
-                    cout << "0. Atras" << endl;
-    
-                    cout << "Ingrese el numero de subopcion: ";
-                    cin >> subopcion1;
-                    system("CLS");
-                    
+
                     switch (subopcion1) {
                     case 1:
                         BibliotecaReportesArboles::ReportarPasilloMasVisitado(ArbolPasillos);
-                        //BibliotecaReportes::ReportarPasillos(ListaPasillos);
                         break;
                     case 2:
-                        //BibliotecaReportes::ReportarProductosPasillo(ListaProds);
+                        BibliotecaReportesArboles::ReportarPasilloMenosVisitado(ArbolPasillos);
                         break;
                     case 3:
-                        //BibliotecaReportes::ReportarMarcasProducto(ListaMarcas);
+                        //BibliotecaReportesArboles::ReportarProductoMasVendido(ArbolProds);
                         break;
                     case 4:
-                        //BibliotecaReportes::ReportarAdministradores(TablaAdmins);
+                        //BibliotecaReportesArboles::ReportarMarcaMasVendido(ArbolMarcas);
                         break;
                     case 5:
-                        //BibliotecaReportes::ReportarClientes(TablaClientes);
+                        //BibliotecaReportesArboles::ReportarClienteMayorCompra(TablaClientes);
                         break;
                     case 6:
-                        //BibliotecaReportes::ReportarCiudades(ListaCiudades);
+                        //BibliotecaReportesArboles::ReportarClienteMenorCompra(TablaClientes);
                         break;
                     case 7:
-                        //BibliotecaReportes::ReportarPasilloMasVisto(ListaPasillos);
+                        //BibliotecaReportesArboles::ReportarProductoGondola(ArbolInventario);
                         break;
                     case 8:
-                        //BibliotecaReportes::ReportarPasilloMenosVisto(ListaPasillos);
+                        //BibliotecaReportesArboles::ReportarClienteMasFacturo(ArbolInventario);
                         break;
                     case 9:
-                        //BibliotecaReportes::ReportarProductosMasBuscados(ListaProds);
+                        //BibliotecaReportesArboles::ReportarMarcasProducto(ArbolProds);
                         break;
                     case 10:
-                        //BibliotecaReportes::ReportarMarcasMasBuscadas(ListaMarcas);
+                        //BibliotecaReportesArboles::ReportarFacturaMayor( por determinar, no se);
+                        break;
+                    case 11:
+                        //BibliotecaReportesArboles::ReportarProductos(ArbolProds;
+                        break;
+                    case 12:
+                        //BibliotecaReportesArboles::ReportarClientes(ArbolB);
+                        break;
+                    case 13:
+                        BibliotecaReportesArboles::ReportarPasillos(ArbolPasillos);
+                        break;
+                    case 14:
+                        //BibliotecaReportes::ReportarInventario(ArbolInventario);
                         break;
                     case 0:
                         cout << "Volviendo al menu principal..." << endl;
                         break;
                     default:
-                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 10." << endl;
+                        cout << "Subopcion no válida. Por favor ingresa un número del 1 al 14." << endl;
                         break;
                     }
-                }while (subopcion1 != 0);
+                } while (subopcion1 != 0);
                 break;
-            case 9:
-                MenuFuncionesAdmin::Facturar(ListaCompras);
-            case 10:
-            case 11:
-                MenuFuncionesAdmin::VerificarIventario(ArbolInventario, ListaCompras);
             case 0:
                 cout << "Saliendo del programa..." << endl;
                 break;
             default:
-                cout << "Opción no válida. Por favor ingresa un número del 1 al 8." << endl;
+                cout << "Opción no válida. Por favor ingresa un número del 1 al 5." << endl;
                 break;
             }
             system("CLS");
@@ -604,12 +503,12 @@ Inicio:
         do
         {
             // Mostrar el menú principal
-            cout << "Menu:" << endl;
+            cout << "===== Menu Clientes =====" << endl;
             cout << "1. Consultar Precio" << endl;
             cout << "2. Consultar Descuento" << endl;
             cout << "3. Consultar productos" << endl;
             cout << "4. Comprar" << endl;
-            cout << "9. Salir" << endl;
+            cout << "0. Salir" << endl;
             // Solicitar al usuario que ingrese una opción
             cout << "Ingrese el numero de opcion: ";
             cin >> opcion;
@@ -648,16 +547,16 @@ Inicio:
                     cout<<"Debe estar logueado para usar esta opcion\n";
                 }
                 break;
-            case 9:
+            case 0:
                 cout << "Saliendo del programa..." << endl;
                 break;
             default:
-                cout << "Opción no válida. Por favor ingresa un número del 1 al 8." << endl;
+                cout << "Opción no válida. Por favor ingresa un número del 1 al 4." << endl;
                 break;
             }
             system("CLS");
         }
-        while (opcion != 9);
+        while (opcion != 0);
     }
     int Reingresar = 0;
     cout<<"Desea reingresar al sistema? (1: Sí, 2: No): ";

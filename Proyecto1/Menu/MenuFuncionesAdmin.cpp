@@ -87,3 +87,5 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
     Reporte<<"Total a pagar: "+to_string(Descuento*Total)+"\n";
     ListaCompras->BorrarInicio();
 }
+
+

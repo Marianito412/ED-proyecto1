@@ -59,3 +59,21 @@ void BibliotecaReportesArboles::ReportarPasilloMenosVisitado(ArbolBinario* Arbol
     Reporte<<std::to_string(MasBuscado->Codigo)+","+MasBuscado->Nombre+"\n";
     Reporte.close();
 }
+
+void BibliotecaReportesArboles::ReportarPasillos(ArbolBinario* Arbol)
+{
+    std::ofstream Reporte("../Reportes/ReportePasillos.csv");
+
+    // Itera sobre los nodos del árbol de pasillos
+    Arbol->IterarNodos([&](NodoBase* Nodo)
+        {
+            // Verifica si el nodo es un NodoPasillo
+            if (NodoPasillo* Pasillo = dynamic_cast<NodoPasillo*>(Nodo))
+            {
+                // Escribe los datos del pasillo en el reporte
+                Reporte << Pasillo->Codigo << "," << Pasillo->Nombre << "\n";
+            }
+        });
+
+    Reporte.close();
+}
