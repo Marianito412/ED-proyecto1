@@ -42,13 +42,18 @@ void MenuFuncionesAdmin::VerificarIventario(ArbolAA* ArbolInventario, ListaSimpl
 
 void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
 {
+    if (!ListaCompras->GetPrimero())
+    {
+        cout<<"No existen carritos en la cola"<<endl;
+        return;
+    }
     NodoCarrito* Carrito = dynamic_cast<NodoCarrito*>(ListaCompras->GetPrimero());
 
     bool ArchivoExiste = true;
     int Cuenta = 0;
     while (ArchivoExiste)
     {
-        ifstream f(to_string(Carrito->Cedula)+"#"+to_string(Cuenta).c_str());
+        ifstream f("../Reportes/"+to_string(Carrito->Cedula)+"#"+to_string(Cuenta).c_str()+".txt");
         ArchivoExiste = f.good();
         if (ArchivoExiste)
         {
@@ -59,6 +64,8 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
     float Total = 0;
     string NombreReporte = to_string(Carrito->Cedula)+"#"+to_string(Cuenta);
     ofstream Reporte("../Reportes/"+NombreReporte+".txt");
+
+    cout<<NombreReporte<<endl;
     
     Reporte<<"Consecutivo factura: #"+to_string(Cuenta)+"\n";
     Reporte<<"Cedula: "+to_string(Carrito->Cedula)+"\n";
@@ -84,7 +91,7 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
         Descuento = 0.05f;
     }
     Reporte<<"Descuento: "+to_string(Descuento)+"\n";
-    Reporte<<"Total a pagar: "+to_string(Descuento*Total)+"\n";
+    Reporte<<"Total a pagar: "+to_string((1-Descuento)*Total)+"\n";
     ListaCompras->BorrarInicio();
 }
 
@@ -107,11 +114,11 @@ void MenuFuncionesAdmin::RevisarGondolas(ListaSimple* ListaVentas, ArbolAA* Arbo
                     {
                         // Ajustar la cantidad en inventario y mostrar mensaje
                         Inventario->Inventario -= 20;
-                        std::cout << "Se han ajustado las góndolas para el producto: " << Inventario->Nombre << std::endl;
+                        std::cout << "Se han ajustado las gï¿½ndolas para el producto: " << Inventario->Nombre << std::endl;
                     }
                     else
                     {
-                        std::cout << "No hay suficiente stock en inventario para ajustar las góndolas del producto: " << Inventario->Nombre << std::endl;
+                        std::cout << "No hay suficiente stock en inventario para ajustar las gï¿½ndolas del producto: " << Inventario->Nombre << std::endl;
                     }
                 }
             }

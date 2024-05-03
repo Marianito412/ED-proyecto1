@@ -13,6 +13,7 @@ public:
     std::string Nombre;
     int Cantidad;
     bool CanastaBasica;
+    int Ventas;
 
     NodoInventario(const std::string& Linea);
 

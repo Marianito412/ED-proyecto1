@@ -44,6 +44,7 @@ void MenuFunciones::BuscarPasilloABB(ArbolBinario* Arbol)
     {
         cout<<"Nodo encontrado!"<<endl;
         Pasillo->Mostrar();
+        Pasillo->Vistas++;
         return;
     }
     cout<<"Nodo no encontrado!";

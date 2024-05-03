@@ -3,6 +3,8 @@
 #include "../Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 #include "../Estructuras/Arboles/ArbolAA/ArbolAA.h"
 #include "../Estructuras/Arboles/ArbolRN/ArbolRN.h"
+#include "../Estructuras/TablaHash/TablaHash.h"
+
 //#include "../Estructuras/Arboles/ArbolB/ArbolB.h"
 class BibliotecaReportesArboles
 {
@@ -10,9 +12,12 @@ public:
     static void ReportarPasilloMasVisitado(ArbolBinario* Arbol);
     static void ReportarPasilloMenosVisitado(ArbolBinario* Arbol);
     static void ReportarPasillos(ArbolBinario* Arbol);
+    static void ReportarMarcasPorProducto(ArbolRN* Marcas);
+    static void ReportarProductosDePasillo(ArbolBinario* Pasillos, ArbolAVL* Productos);
+    static void ReportarClientes(TablaHash* Clientes);
     static void ReportarInventario(ArbolAA* Arbol);
 
-    //static void ReportarProductoMasVendido(ArbolAVL* Arbol);
+    static void ReportarProductoMasVendido(ArbolAA* Inventario);
     //static void ReportarMarcaMasVendido(ArbolRN* Arbol);
     //static void ReportarClienteMayorCompra(ArbolB* Arbol);
     //static void ReportarClienteMenorCompra(ArbolB* Arbol);

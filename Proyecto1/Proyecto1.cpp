@@ -277,7 +277,7 @@ Inicio:
             cout << "1. Mantenimiento de Bases de datos" << endl;
             cout << "2. Facturar" << endl;
             cout << "3. Revisar Gondolas" << endl;
-            cout << "4. Vericar inventario" << endl;
+            cout << "4. Verificar inventario" << endl;
             cout << "5. Reportes" << endl;
             cout << "0. Salir" << endl;
             // Solicitar al usuario que ingrese una opción
@@ -441,14 +441,17 @@ Inicio:
                         break;
                     }
                     system("CLS");
-                }while (opcion != 3);
-
+                }while (subopcion1 != 0);
+                break;
             case 2:
                 MenuFuncionesAdmin::Facturar(ListaCompras);
+                break;
             case 3:
                 MenuFuncionesAdmin::RevisarGondolas(ListaCompras,ArbolInventario);
+                break;
             case 4:
-                MenuFuncionesAdmin::VerificarIventario(ArbolInventario, ListaCompras);               
+                MenuFuncionesAdmin::VerificarIventario(ArbolInventario, ListaCompras);
+                break;
             case 5:
                 do {
                     cout << "===== Reportes =====" << endl;
@@ -480,7 +483,7 @@ Inicio:
                         BibliotecaReportesArboles::ReportarPasilloMenosVisitado(ArbolPasillos);
                         break;
                     case 3:
-                        //BibliotecaReportesArboles::ReportarProductoMasVendido(ArbolProds);
+                        BibliotecaReportesArboles::ReportarProductoMasVendido(ArbolInventario);
                         break;
                     case 4:
                         //BibliotecaReportesArboles::ReportarMarcaMasVendido(ArbolMarcas);
@@ -498,16 +501,16 @@ Inicio:
                         //BibliotecaReportesArboles::ReportarClienteMasFacturo(ArbolInventario);
                         break;
                     case 9:
-                        //BibliotecaReportesArboles::ReportarMarcasProducto(ArbolProds);
+                        BibliotecaReportesArboles::ReportarMarcasPorProducto(ArbolMarcas);
                         break;
                     case 10:
                         //BibliotecaReportesArboles::ReportarFacturaMayor( por determinar, no se);
                         break;
                     case 11:
-                        //BibliotecaReportesArboles::ReportarProductos(ArbolProds);
+                        BibliotecaReportesArboles::ReportarProductosDePasillo(ArbolPasillos, ArbolProds);
                         break;
                     case 12:
-                        //BibliotecaReportesArboles::ReportarClientes(ArbolB);
+                        BibliotecaReportesArboles::ReportarClientes(TablaClientes);
                         break;
                     case 13:
                         BibliotecaReportesArboles::ReportarPasillos(ArbolPasillos);
