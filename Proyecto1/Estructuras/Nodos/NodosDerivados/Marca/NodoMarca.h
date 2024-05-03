@@ -8,6 +8,7 @@ public:
     int CodPasillo;
     int CodProducto;
     int CodMarca;
+    int Ventas = 0;
     std::string Nombre;
     int CantidadGondola;
     double Precio;

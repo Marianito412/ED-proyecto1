@@ -486,7 +486,7 @@ Inicio:
                         BibliotecaReportesArboles::ReportarProductoMasVendido(ArbolInventario);
                         break;
                     case 4:
-                        //BibliotecaReportesArboles::ReportarMarcaMasVendido(ArbolMarcas);
+                        BibliotecaReportesArboles::ReportarMarcaMasVendida(ArbolMarcas);
                         break;
                     case 5:
                         //BibliotecaReportesArboles::ReportarClienteMayorCompra(TablaClientes);
@@ -516,7 +516,7 @@ Inicio:
                         BibliotecaReportesArboles::ReportarPasillos(ArbolPasillos);
                         break;
                     case 14:
-                        //BibliotecaReportesArboles::ReportarInventario(ArbolInventario); NO ESTA FUNCIONANDO
+                        BibliotecaReportesArboles::ReportarInventario(ArbolInventario);
                         break;
                     case 0:
                         cout << "Volviendo al menu principal..." << endl;

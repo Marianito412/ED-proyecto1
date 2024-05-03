@@ -16,6 +16,7 @@ public:
     static void ReportarProductosDePasillo(ArbolBinario* Pasillos, ArbolAVL* Productos);
     static void ReportarClientes(TablaHash* Clientes);
     static void ReportarInventario(ArbolAA* Arbol);
+    static void ReportarMarcaMasVendida(ArbolRN* Marcas);
 
     static void ReportarProductoMasVendido(ArbolAA* Inventario);
     //static void ReportarMarcaMasVendido(ArbolRN* Arbol);

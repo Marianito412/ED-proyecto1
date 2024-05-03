@@ -153,7 +153,7 @@ void BibliotecaReportesArboles::ReportarInventario(ArbolAA* Arbol)
     Reporte << "Codigo Pasillo,Codigo Producto,Codigo Marca,Codigo Inventario,Nombre,Cantidad,Precio\n";
 
     // Función lambda para iterar sobre los nodos del árbol y escribir los datos del inventario en el reporte
-    Arbol->IterarNodos([&](NodoBase* Nodo)
+    Arbol->IterarNodos([&Reporte](NodoBase* Nodo)
         {
             if (NodoInventario* Inventario = dynamic_cast<NodoInventario*>(Nodo))
             {
@@ -166,6 +166,31 @@ void BibliotecaReportesArboles::ReportarInventario(ArbolAA* Arbol)
 
     cout<<"Reporte generado!";
     Reporte.close();
+}
+
+void BibliotecaReportesArboles::ReportarMarcaMasVendida(ArbolRN* Marcas)
+{
+    std::ofstream Reporte("../Reportes/ReporteMarcaMasVendida.csv");
+
+    Reporte<<"Pasillo,Producto,Marca,Nombre\n";
+
+    NodoMarca* MasVendido = nullptr;
+
+    Marcas->IterarNodos([&Reporte, &MasVendido](NodoBase* Nodo)
+    {
+        if (NodoMarca* Marca = dynamic_cast<NodoMarca*>(Nodo))
+        {
+            if (!MasVendido) MasVendido = Marca;
+
+            if (Marca->Ventas>=MasVendido->Ventas)
+            {
+                MasVendido = Marca;
+            }
+        }
+    });
+    Reporte<<MasVendido->CodPasillo<<","<<MasVendido->CodProducto<<","<<MasVendido->CodMarca<<","<<MasVendido->Nombre+"\n";
+    Reporte.close();
+    cout<<"Reporte generado!";
 }
 
 void BibliotecaReportesArboles::ReportarProductoMasVendido(ArbolAA* Inventario)

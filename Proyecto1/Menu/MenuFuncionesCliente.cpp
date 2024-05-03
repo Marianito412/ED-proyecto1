@@ -127,6 +127,7 @@ void MenuFuncionesCliente::Comprar(ListaSimple*& ListaCarritos, ArbolBinario* Pa
         NodoInventario* RefInventario = dynamic_cast<NodoInventario*>(ArbolInventario->Encontrar(CodigoInventario));
         RefInventario->Cantidad = RefInventario->Cantidad-Cantidad;
         RefInventario->Ventas++;
+        dynamic_cast<NodoMarca*>(Marcas->BusquedaM(Marca))->Ventas++;
         Carrito->Compras->InsertarFinal(new NodoCompra(Pasillo, Producto, Marca, Cantidad, CodigoInventario, dynamic_cast<NodoMarca*>(Marcas->BusquedaM(Marca))->Precio, RefInventario));
         
         int Continuacion;
