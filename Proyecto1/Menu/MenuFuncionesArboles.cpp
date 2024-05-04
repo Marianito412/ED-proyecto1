@@ -272,6 +272,37 @@ void MenuFunciones::EncontrarInventarioAA(ArbolAA* Arbol)
 
 void MenuFunciones::ModificarInventarioAA(ArbolAA* Arbol)
 {
+    int CodInv;
+    cout<<"Ingrese el codigo del inventario a buscar: "<<endl;
+    cin>>CodInv;
+
+    NodoBase* NodoEncontrado = Arbol->Encontrar(CodInv);
+
+    if (NodoInventario* InvEncontrado = dynamic_cast<NodoInventario*>(NodoEncontrado))
+    {
+        InvEncontrado->Mostrar();
+        cout<<"Inventario encontrado!"<<endl;
+
+        int Cantidad;
+        string Nombre;
+
+        cout<<"Ingrese el nuevo nombre: ";
+        cin>>Nombre;
+        
+        cout<<"Ingrese la nueva cantidad: ";
+        cin>>Cantidad;
+
+        InvEncontrado->Nombre = Nombre;
+        InvEncontrado->Cantidad = Cantidad;
+        InvEncontrado->Mostrar();
+        return;
+    }
+    cout<<"Inventario no encontrado!"<<endl;
+    
+    Arbol->IterarNodos([](NodoBase* Nodo)
+    {
+        
+    });
 }
 #pragma endregion 
 
