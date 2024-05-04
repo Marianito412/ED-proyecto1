@@ -298,11 +298,6 @@ void MenuFunciones::ModificarInventarioAA(ArbolAA* Arbol)
         return;
     }
     cout<<"Inventario no encontrado!"<<endl;
-    
-    Arbol->IterarNodos([](NodoBase* Nodo)
-    {
-        
-    });
 }
 #pragma endregion 
 
