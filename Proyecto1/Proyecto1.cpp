@@ -271,7 +271,7 @@ int main()
 Inicio:
     
     bool Exito;
-    bool EsAdmin = MenuFunciones::Login(TablaAdmins, TablaClientes, Exito);
+    bool EsAdmin = MenuFunciones::Login(ArbolAdmin, ArbolClientes, Exito);
     int opcion, subopcion1;
     
     if (EsAdmin)

@@ -7,7 +7,7 @@
 #include "../Estructuras/Nodos/NodosDerivados/Ciudad/NodoCiudad.h"
 #include "../Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h"
 #pragma region Login 
-bool MenuFunciones::Login(TablaHash* TablaAdmins, TablaHash* TablaClientes, bool& Exitoso)
+bool MenuFunciones::Login(ArbolB* ArbolAdmins, ArbolB* ArbolClientes, bool& Exitoso)
 {
     do
     {
@@ -25,14 +25,8 @@ bool MenuFunciones::Login(TablaHash* TablaAdmins, TablaHash* TablaClientes, bool
                 cout << "Ingrese su codigo de adminstrador: ";
                 cin >> CodAdmin;
 
-                NodoBase* NodoLoginAdmin = TablaAdmins->BuscarNodo(CodAdmin, [CodAdmin](NodoBase* Nodo)
-                {
-                    if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo))
-                    {
-                        return Admin->CodAministrador == CodAdmin;
-                    }
-                    return false;
-                });
+                NodoBase* NodoLoginAdmin = nullptr;
+                ArbolAdmins->Buscar(CodAdmin, NodoLoginAdmin);
                 if (!NodoLoginAdmin)
                 {
                     cout << "Codigo inválido" << endl;
@@ -48,14 +42,8 @@ bool MenuFunciones::Login(TablaHash* TablaAdmins, TablaHash* TablaClientes, bool
                 cout << "Ingrese su cedula: ";
                 cin >> Cedula;
 
-                NodoBase* NodoLoginCliente = TablaClientes->BuscarNodo(Cedula, [Cedula](NodoBase* Nodo)
-                {
-                    if (NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo))
-                    {
-                        return Cliente->Cedula == Cedula;
-                    }
-                    return false;
-                });
+                NodoBase* NodoLoginCliente = nullptr;
+                ArbolClientes->Buscar(Cedula, NodoLoginCliente);
                 if (!NodoLoginCliente)
                 {
                     cout << "Cedula inválida" << endl;

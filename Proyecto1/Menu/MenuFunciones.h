@@ -17,7 +17,7 @@ class MenuFunciones
 public:
 
 #pragma region Login
-    static bool Login(TablaHash* TablaAdmins, TablaHash* TablaClientes, bool& Exitoso);
+    static bool Login(ArbolB* ArbolAdmins, ArbolB* ArbolClientes, bool& Exitoso);
 #pragma endregion 
 
 #pragma region Pasillo
