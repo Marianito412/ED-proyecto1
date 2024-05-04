@@ -494,10 +494,10 @@ Inicio:
                         BibliotecaReportesArboles::ReportarMarcaMasVendida(ArbolMarcas);
                         break;
                     case 5:
-                        //BibliotecaReportesArboles::ReportarClienteMayorCompra(TablaClientes);
+                        BibliotecaReportesArboles::ReportarClienteMayorCompra(ListaCompras, ArbolClientes);
                         break;
                     case 6:
-                        //BibliotecaReportesArboles::ReportarClienteMenorCompra(TablaClientes);
+                        BibliotecaReportesArboles::ReportarClienteMenorCompra(ListaCompras, ArbolClientes);
                         break;
                     case 7:
                         //BibliotecaReportesArboles::ReportarProductoGondola(ArbolInventario);

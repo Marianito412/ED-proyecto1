@@ -13,4 +13,6 @@ public:
     {
         Compras = new ListaSimple();
     }
+
+    float GetTotal();
 };

@@ -18,9 +18,8 @@ public:
     static void ReportarInventario(ArbolAA* Arbol);
     static void ReportarMarcaMasVendida(ArbolRN* Marcas);
     static void ReportarProductoMasVendido(ArbolAA* Inventario);
-    //static void ReportarMarcaMasVendido(ArbolRN* Arbol);
-    //static void ReportarClienteMayorCompra(ArbolB* Arbol);
-    //static void ReportarClienteMenorCompra(ArbolB* Arbol);
+    static void ReportarClienteMayorCompra(ListaSimple* ListaCarritos, ArbolB* Arbol);
+    static void ReportarClienteMenorCompra(ListaSimple* ListaCarritos, ArbolB* Arbol);
     //static void ReportarProductoGondola(ArbolAA* Arbol);
     //static void ReportarClienteMasFacturo(ArbolB* Arbol);
     //static void ReportarMarcasProducto(ArbolRN* Arbol);

@@ -6,6 +6,8 @@
 #include <string>
 
 #include "../Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h"
+#include "../Estructuras/Nodos/NodosDerivados/Compra/NodoCarrito.h"
+#include "../Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h"
 #include "../Estructuras/Nodos/NodosDerivados/Marca/NodoMarca.h"
 #include "../Estructuras/Nodos/NodosDerivados/Producto/NodoProducto.h"
 
@@ -215,4 +217,60 @@ void BibliotecaReportesArboles::ReportarProductoMasVendido(ArbolAA* Inventario)
     cout<<"Reporte generado!";
     Reporte<<MasVendido->Pasillo<<MasVendido->Producto<<MasVendido->Nombre<<"\n";
     Reporte.close();
+}
+
+void BibliotecaReportesArboles::ReportarClienteMayorCompra(ListaSimple* ListaCarritos, ArbolB* Arbol)
+{
+    std::ofstream Reporte("../Reportes/ReporteClienteMayorCompra.csv");
+    Reporte<<"Cedula,Nombre\n";
+    
+    NodoCarrito* MayorCarrito = nullptr;
+    ListaCarritos->IterarNodos([&MayorCarrito](NodoBase* Nodo)
+    {
+        if (NodoCarrito* Carrito = dynamic_cast<NodoCarrito*>(Nodo))
+        {
+            if (!MayorCarrito)
+            {
+                MayorCarrito = Carrito;
+                return;
+            }
+            if (Carrito->GetTotal()>MayorCarrito->GetTotal())
+            {
+                MayorCarrito = Carrito;
+            }
+        }
+    });
+    NodoBase* Nodo = nullptr;
+    Arbol->Buscar(MayorCarrito->Cedula, Nodo);
+    NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo);
+    Reporte<<Cliente->Cedula<<","<<Cliente->Nombre<<"\n";
+    cout<<"Reporte generado\n";
+}
+
+void BibliotecaReportesArboles::ReportarClienteMenorCompra(ListaSimple* ListaCarritos, ArbolB* Arbol)
+{
+    std::ofstream Reporte("../Reportes/ReporteClienteMenorCompra.csv");
+    Reporte<<"Cedula,Nombre\n";
+    
+    NodoCarrito* MayorCarrito = nullptr;
+    ListaCarritos->IterarNodos([&MayorCarrito](NodoBase* Nodo)
+    {
+        if (NodoCarrito* Carrito = dynamic_cast<NodoCarrito*>(Nodo))
+        {
+            if (!MayorCarrito)
+            {
+                MayorCarrito = Carrito;
+                return;
+            }
+            if (Carrito->GetTotal()<MayorCarrito->GetTotal())
+            {
+                MayorCarrito = Carrito;
+            }
+        }
+    });
+    NodoBase* Nodo = nullptr;
+    Arbol->Buscar(MayorCarrito->Cedula, Nodo);
+    NodoCliente* Cliente = dynamic_cast<NodoCliente*>(Nodo);
+    Reporte<<Cliente->Cedula<<","<<Cliente->Nombre<<"\n";
+    cout<<"Reporte generado\n";
 }
