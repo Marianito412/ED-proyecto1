@@ -93,8 +93,8 @@ void MenuFuncionesCliente::ConsultarProductos(ArbolAVL* ArbolProductos)
     });
 }
 
-void MenuFuncionesCliente::Comprar(ListaSimple*& ListaCarritos, ArbolBinario* Pasillos, ArbolAVL* Productos,
-                                   ArbolRN* Marcas, ArbolAA* ArbolInventario, TablaHash* Clientes)
+void MenuFuncionesCliente::Comprar(ListaSimple*& ListaCarritos, ListaSimple*& Historial, ArbolBinario* Pasillos,
+                                   ArbolAVL* Productos, ArbolRN* Marcas, ArbolAA* ArbolInventario, TablaHash* Clientes)
 {
     int Cedula, Pasillo, Producto, Marca, Cantidad, CantidadDisponible, CodigoInventario;
 

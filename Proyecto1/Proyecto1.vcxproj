@@ -158,6 +158,7 @@
     <ClCompile Include="BibliotecaReportes\BibliotecaReportesArboles.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolAA\ArbolAA.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolAVL\ArbolAVL.cpp" />
+    <ClCompile Include="Estructuras\Arboles\ArbolB.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolBinario\ArbolBinario.cpp" />
     <ClCompile Include="Estructuras\Arboles\ArbolRN\ArbolRN.cpp" />
     <ClCompile Include="Estructuras\ListaCircular\ListaCircular.cpp" />
@@ -187,6 +188,7 @@
     <ClInclude Include="BibliotecaReportes\BibliotecaReportesArboles.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolAA\ArbolAA.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolAVL\ArbolAVL.h" />
+    <ClInclude Include="Estructuras\Arboles\ArbolB.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolBinario\ArbolBinario.h" />
     <ClInclude Include="Estructuras\Arboles\ArbolRN\ArbolRN.h" />
     <ClInclude Include="Estructuras\ListaCircular\ListaCircular.h" />

@@ -10,6 +10,8 @@ class NodoCliente : public NodoBase {
         int CodCiudad;
         int Telefono;
         std::string Correo;
+        int Facturas;
+        float Compra
 
         NodoCliente(std::string& Linea);
         void Mostrar() override;

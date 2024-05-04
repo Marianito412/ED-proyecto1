@@ -7,7 +7,7 @@ class MenuFuncionesAdmin
     static int ConseguirCantidadInventario(int CodInventario, ListaSimple* ListaCarritos);
 public:
 
-    static void Facturar(ListaSimple* ListaCompras);
+    static void Facturar(ListaSimple* ListaCompras, ListaSimple* HistorialCompras);
 
     static void VerificarIventario(ArbolAA* ArbolInventario, ListaSimple* ListaCarritos);
 

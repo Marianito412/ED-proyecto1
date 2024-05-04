@@ -40,7 +40,7 @@ void MenuFuncionesAdmin::VerificarIventario(ArbolAA* ArbolInventario, ListaSimpl
     });
 }
 
-void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
+void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras, ListaSimple* HistorialCompras)
 {
     if (!ListaCompras->GetPrimero())
     {
@@ -48,6 +48,7 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
         return;
     }
     NodoCarrito* Carrito = dynamic_cast<NodoCarrito*>(ListaCompras->GetPrimero());
+    NodoCarrito* Historial = new NodoCarrito(Carrito->Cedula);
 
     bool ArchivoExiste = true;
     int Cuenta = 0;
@@ -71,12 +72,13 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
     Reporte<<"Cedula: "+to_string(Carrito->Cedula)+"\n";
     Reporte<<"Producto\tMarca\tCantidad\tPrecio\tTotal por producto\n";
     
-    Carrito->Compras->IterarNodos([&Reporte, Cuenta, Carrito, &Total](NodoBase* Nodo)
+    Carrito->Compras->IterarNodos([&Reporte, Cuenta, Carrito, &Total, &Historial](NodoBase* Nodo)
     {
         if (NodoCompra* Compra = dynamic_cast<NodoCompra*>(Nodo))
         {
             float TotalProd = Compra->Precio*Compra->Cantidad;
             Total += TotalProd;
+            Historial->Compras->InsertarFinal(new NodoCompra(Compra->Pasillo, Compra->Producto, Compra->Marca, Compra->Cantidad, Compra->Inventario, Compra->Precio, Compra->RefInventario));
             string Linea = to_string(Compra->Producto)+"\t"+to_string(Compra->Marca)+"\t"+to_string(Compra->Cantidad)+"\t"+to_string(Compra->Precio)+"\t"+to_string(TotalProd)+"\n";
             Reporte<<Linea;
         }
@@ -92,7 +94,9 @@ void MenuFuncionesAdmin::Facturar(ListaSimple* ListaCompras)
     }
     Reporte<<"Descuento: "+to_string(Descuento)+"\n";
     Reporte<<"Total a pagar: "+to_string((1-Descuento)*Total)+"\n";
-    ListaCompras->BorrarInicio();
+    
+    HistorialCompras->InsertarFinal(Historial);
+    ListaCompras->BorrarPosicion(0);
 }
 
 void MenuFuncionesAdmin::RevisarGondolas(ListaSimple* ListaVentas, ArbolAA* ArbolInventario)

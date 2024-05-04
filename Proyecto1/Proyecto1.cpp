@@ -241,6 +241,7 @@ ArbolBinario* CargarCiudadesABB(string NombreArchivo)
 int main()
 {
     ListaSimple* ListaCompras = new ListaSimple();
+    ListaSimple* HistorialCompras = new ListaSimple();
     
     TablaHash* TablaAdmins = CargarAdmins("Administradores.txt");
     TablaHash* TablaClientes = CargarClientes("Clientes.txt");
@@ -416,10 +417,10 @@ Inicio:
                                 MenuFunciones::ModificarInventarioAA(ArbolInventario);
                                 break;
                             case 5:                               
-                                //MenuFunciones::ModificarClientesB(ArbolClientes);
+                                MenuFunciones::ModificarClientes(TablaClientes, nullptr);
                                 break;
                             case 6:
-                                //MenuFunciones::ModificarAdministradorB(ArboAdministrador);
+                                MenuFunciones::ModificarAdministrador(TablaAdmins, nullptr);
                                 break;
                             case 7:
                                 MenuFunciones::ModificarCiudadABB(ArbolCiudades);
@@ -444,7 +445,7 @@ Inicio:
                 }while (subopcion1 != 0);
                 break;
             case 2:
-                MenuFuncionesAdmin::Facturar(ListaCompras);
+                MenuFuncionesAdmin::Facturar(ListaCompras, HistorialCompras);
                 break;
             case 3:
                 MenuFuncionesAdmin::RevisarGondolas(ListaCompras,ArbolInventario);
@@ -578,8 +579,8 @@ Inicio:
                 cout << "Comprar: " << endl;
                 if (Exito)
                 {
-                    MenuFuncionesCliente::Comprar(ListaCompras, ArbolPasillos, ArbolProds, ArbolMarcas, ArbolInventario,
-                                                  TablaClientes);    
+                    MenuFuncionesCliente::Comprar(ListaCompras, HistorialCompras, ArbolPasillos, ArbolProds, ArbolMarcas,
+                                                  ArbolInventario, TablaClientes);    
                 }else
                 {
                     cout<<"Debe estar logueado para usar esta opcion\n";

@@ -21,6 +21,6 @@ public:
 
     static void ConsultarProductos(ArbolAVL* ArbolProductos);
 
-    static void Comprar(ListaSimple*& ListaCarritos, ArbolBinario* Pasillos, ArbolAVL* Productos, ArbolRN* Marcas,
-                        ArbolAA* ArbolInventario, TablaHash* Clientes);
+    static void Comprar(ListaSimple*& ListaCarritos, ListaSimple*& Historial, ArbolBinario* Pasillos, ArbolAVL* Productos,
+                        ArbolRN* Marcas, ArbolAA* ArbolInventario, TablaHash* Clientes);
 };
