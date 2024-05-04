@@ -7,21 +7,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a2e0685-6021-4c27-b05b-3d8d5c2e429f" name="Changes" comment="Faltó esto">
+    <list default="true" id="0a2e0685-6021-4c27-b05b-3d8d5c2e429f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodoArbolB.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodoArbolB.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Compra/NodoCompra.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesAdmin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesCliente.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolB.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolB.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolB.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Arboles/ArbolB.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodoBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodoBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Administrador/NodoAdmin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Administrador/NodoAdmin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Administrador/NodoAdmin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Administrador/NodoAdmin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Estructuras/Nodos/NodosDerivados/Clientes/NodoCliente.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFunciones.h" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFunciones.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesArboles.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Menu/MenuFuncionesArboles.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/Proyecto1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Proyecto1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/Proyecto1.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/Proyecto1.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAA.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAA.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAVL.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolAVL.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolBinario.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolBinario.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolRN.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ArbolRN.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/BibliotecaReportes.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/BibliotecaReportes.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/BibliotecaReportesArboles.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/BibliotecaReportesArboles.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/LectorArchivos.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/LectorArchivos.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaCircular.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaCircular.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaDoble.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaDoble.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaDobleCircular.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaDobleCircular.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaSimple.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/ListaSimple.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFunciones.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFunciones.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesAdmin.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesAdmin.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesArboles.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesArboles.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesCliente.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/MenuFuncionesCliente.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoAdmin.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoAdmin.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoBase.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoBase.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCarrito.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCarrito.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCiudad.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCiudad.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCliente.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCliente.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCompra.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoCompra.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoInventario.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoInventario.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoMarca.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoMarca.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoPasillo.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoPasillo.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoProducto.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/NodoProducto.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.exe.recipe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/Proyecto1.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/Proyecto1.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/Proyecto1.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/TablaHash.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/TablaHash.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto1/x64/Debug/vc143.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/x64/Debug/Proyecto1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Proyecto1.exe" afterDir="false" />
@@ -49,10 +86,16 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/include/string" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Usuario/Desktop/ED-proyecto1/Proyecto1/Estructuras/Arboles/ArbolAA/ArbolAA.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Usuario/Desktop/ED-proyecto1/Proyecto1/Menu/MenuFuncionesCliente.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Usuario/Desktop/ED-proyecto1/Proyecto1/Menu/MenuFuncionesCliente.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -64,29 +107,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C++ Project.Proyecto1.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Mariano",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C++ Project.Proyecto1.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Mariano&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Usuario\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Usuario\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Usuario\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Usuario\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Usuario\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Usuario\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Proyecto1" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -172,6 +215,7 @@
       <workItem from="1714527989490" duration="5568000" />
       <workItem from="1714535378932" duration="1907000" />
       <workItem from="1714605604020" duration="16000000" />
+      <workItem from="1714791860213" duration="2178000" />
     </task>
     <task id="LOCAL-00001" summary="Agregar clases de estructuras de datos">
       <option name="closed" value="true" />
@@ -443,24 +487,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Proyecto1/Menu/MenuFunciones.cpp</url>
-          <line>190</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Proyecto1/Menu/MenuFunciones.h</url>
-          <line>79</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Proyecto1/Menu/MenuFunciones.h</url>
-          <line>42</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Proyecto1/Menu/MenuFunciones.h</url>
-          <line>31</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/Proyecto1/Proyecto1.cpp</url>
+          <line>336</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
