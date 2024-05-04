@@ -3,6 +3,7 @@
 #include "../Estructuras/Arboles/ArbolRN/ArbolRN.h"
 #include "../Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 #include "../Estructuras/Arboles/ArbolBinario/ArbolBinario.h"
+#include "../Estructuras/Arboles/ArbolB.h"
 #include "../Estructuras/ListaSimple/ListaSimple.h"
 #include "../Estructuras/TablaHash/TablaHash.h"
 
@@ -22,5 +23,5 @@ public:
     static void ConsultarProductos(ArbolAVL* ArbolProductos);
 
     static void Comprar(ListaSimple*& ListaCarritos, ListaSimple*& Historial, ArbolBinario* Pasillos, ArbolAVL* Productos,
-                        ArbolRN* Marcas, ArbolAA* ArbolInventario, TablaHash* Clientes);
+                        ArbolRN* Marcas, ArbolAA* ArbolInventario, ArbolB* Clientes);
 };

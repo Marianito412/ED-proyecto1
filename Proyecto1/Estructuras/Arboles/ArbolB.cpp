@@ -48,3 +48,9 @@ NodoArbolB* ArbolB::Buscar(int k, NodoBase*& Nodo)
 {
     return (Raiz == nullptr)? nullptr : Raiz->search(k, Nodo);
 }
+
+void ArbolB::IterarNodos(std::function<void(NodoBase*)> func)
+{
+    if (!Raiz) return;
+    Raiz->IterarNodos(func);
+}

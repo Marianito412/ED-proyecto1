@@ -5,7 +5,7 @@
 #include "../Estructuras/Arboles/ArbolRN/ArbolRN.h"
 #include "../Estructuras/TablaHash/TablaHash.h"
 
-//#include "../Estructuras/Arboles/ArbolB/ArbolB.h"
+#include "../Estructuras/Arboles/ArbolB.h"
 class BibliotecaReportesArboles
 {
 public:
@@ -14,7 +14,7 @@ public:
     static void ReportarPasillos(ArbolBinario* Arbol);
     static void ReportarMarcasPorProducto(ArbolRN* Marcas);
     static void ReportarProductosDePasillo(ArbolBinario* Pasillos, ArbolAVL* Productos);
-    static void ReportarClientes(TablaHash* Clientes);
+    static void ReportarClientes(ArbolB* Clientes);
     static void ReportarInventario(ArbolAA* Arbol);
     static void ReportarMarcaMasVendida(ArbolRN* Marcas);
     static void ReportarProductoMasVendido(ArbolAA* Inventario);

@@ -94,7 +94,7 @@ void MenuFuncionesCliente::ConsultarProductos(ArbolAVL* ArbolProductos)
 }
 
 void MenuFuncionesCliente::Comprar(ListaSimple*& ListaCarritos, ListaSimple*& Historial, ArbolBinario* Pasillos,
-                                   ArbolAVL* Productos, ArbolRN* Marcas, ArbolAA* ArbolInventario, TablaHash* Clientes)
+                                   ArbolAVL* Productos, ArbolRN* Marcas, ArbolAA* ArbolInventario, ArbolB* Clientes)
 {
     int Cedula, Pasillo, Producto, Marca, Cantidad, CantidadDisponible, CodigoInventario;
 

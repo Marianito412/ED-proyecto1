@@ -130,7 +130,7 @@ void BibliotecaReportesArboles::ReportarProductosDePasillo(ArbolBinario* Pasillo
     Reporte.close();
 }
 
-void BibliotecaReportesArboles::ReportarClientes(TablaHash* Clientes)
+void BibliotecaReportesArboles::ReportarClientes(ArbolB* Clientes)
 {
     std::ofstream Reporte("../Reportes/ReporteClientes.csv");
     Reporte<<"Cedula,Nombre\n";

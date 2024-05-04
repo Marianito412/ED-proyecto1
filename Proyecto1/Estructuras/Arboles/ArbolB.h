@@ -1,4 +1,6 @@
 #pragma once
+#include <functional>
+
 #include "../Nodos/NodoArbolB.h"
 #include "../Nodos/NodoBase.h"
 
@@ -13,4 +15,6 @@ public:
     void Recorrer();
 
     NodoArbolB* Buscar(int k, NodoBase*& Nodo);
+
+    void IterarNodos(std::function<void(NodoBase*)> func);
 };

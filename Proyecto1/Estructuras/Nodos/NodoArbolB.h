@@ -1,4 +1,6 @@
 #pragma once
+#include <functional>
+
 #include "NodoBase.h"
 
 class NodoArbolB
@@ -31,6 +33,8 @@ public:
 
     // A function to traverse all nodes in a subtree rooted with this node
     void traverse();
+
+    void IterarNodos(std::function<void(NodoBase*)> func);
 
     // A function to search a key in the subtree rooted with this node.
     NodoArbolB* search(int k, NodoBase*& Nodo);   // returns NULL if k is not present.

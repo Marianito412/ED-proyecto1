@@ -105,6 +105,26 @@ void NodoArbolB::traverse()
         C[i]->traverse();
 }
 
+void NodoArbolB::IterarNodos(std::function<void(NodoBase*)> func)
+{
+    // There are n keys and n+1 children, traverse through n keys
+    // and first n children
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        // If this is not leaf, then before printing key[i],
+        // traverse the subtree rooted with child C[i].
+        if (leaf == false)
+            C[i]->IterarNodos(func);
+        //keys[i]->Mostrar();
+        func(keys[i]);
+    }
+
+    // Print the subtree rooted with last child
+    if (leaf == false)
+        C[i]->IterarNodos(func);
+}
+
 NodoArbolB* NodoArbolB::search(int k, NodoBase*& Nodo)
 {
     // Find the first key greater than or equal to k

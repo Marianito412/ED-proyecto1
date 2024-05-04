@@ -515,7 +515,7 @@ Inicio:
                         BibliotecaReportesArboles::ReportarProductosDePasillo(ArbolPasillos, ArbolProds);
                         break;
                     case 12:
-                        BibliotecaReportesArboles::ReportarClientes(TablaClientes);
+                        BibliotecaReportesArboles::ReportarClientes(ArbolClientes);
                         break;
                     case 13:
                         BibliotecaReportesArboles::ReportarPasillos(ArbolPasillos);
@@ -584,7 +584,7 @@ Inicio:
                 if (Exito)
                 {
                     MenuFuncionesCliente::Comprar(ListaCompras, HistorialCompras, ArbolPasillos, ArbolProds, ArbolMarcas,
-                                                  ArbolInventario, TablaClientes);    
+                                                  ArbolInventario, ArbolClientes);    
                 }else
                 {
                     cout<<"Debe estar logueado para usar esta opcion\n";
