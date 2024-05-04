@@ -93,8 +93,8 @@ public:
     static void EncontrarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades);
     static void ModificarClientes(TablaHash* TablaClientes, ListaCircular* ListaCiudades);
 
-    /*static void InsertarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades,int totalClientes);
+    static void InsertarClienteB(ArbolB* Arbol);
     static void EncontrarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades);
-    static void ModificarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades);*/
+    static void ModificarClienteB(ArbolB* Arbol, ListaCircular* ListaCiudades);
 #pragma endregion 
 };

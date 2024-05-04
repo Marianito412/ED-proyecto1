@@ -15,6 +15,16 @@ public:
     float Compra;
 
     NodoCliente(std::string& Linea);
+
+    NodoCliente(int cedula, const std::string& nombre, int cod_ciudad, int telefono, const std::string& correo)
+        : Cedula(cedula),
+          Nombre(nombre),
+          CodCiudad(cod_ciudad),
+          Telefono(telefono),
+          Correo(correo)
+    {
+    }
+
     void Mostrar() override;
 
     int GetLlave() override;

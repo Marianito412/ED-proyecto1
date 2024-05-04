@@ -331,7 +331,7 @@ Inicio:
                                 MenuFunciones::InsertarInventarioAA(ArbolInventario);
                                 break;
                             case 5:                                
-                                //MenuFunciones::InsertarClientesB(ArbolClientes);
+                                MenuFunciones::InsertarClienteB(ArbolClientes);
                                 break;
                             case 6:                               
                                 MenuFunciones::InsertarAdministradorB(ArbolAdmin, nullptr);
@@ -376,7 +376,7 @@ Inicio:
                                 MenuFunciones::EncontrarInventarioAA(ArbolInventario);
                                 break;
                             case 5:                                
-                                //MenuFunciones::EncontrarClientesB(ArbolClientes);
+                                MenuFunciones::EncontrarClienteB(ArbolClientes, nullptr);
                                 break;
                             case 6:                                
                                 MenuFunciones::EncontrarAdministradorB(ArbolAdmin, nullptr);
@@ -421,10 +421,10 @@ Inicio:
                                 MenuFunciones::ModificarInventarioAA(ArbolInventario);
                                 break;
                             case 5:                               
-                                MenuFunciones::ModificarClientes(TablaClientes, nullptr);
+                                MenuFunciones::ModificarClienteB(ArbolClientes, nullptr);
                                 break;
                             case 6:
-                                MenuFunciones::ModificarAdministrador(TablaAdmins, nullptr);
+                                MenuFunciones::ModificarAdministradorB(ArbolAdmin, nullptr);
                                 break;
                             case 7:
                                 MenuFunciones::ModificarCiudadABB(ArbolCiudades);
