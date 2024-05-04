@@ -39,3 +39,8 @@ void NodoAdmin::Mostrar()
     std::cout<<CodAministrador<<" "<<Nombre<<" "<<CodCiudad<<" "<<Telefono<<" "<<Correo<<std::endl;
     NodoBase::Mostrar();
 }
+
+int NodoAdmin::GetLlave()
+{
+    return CodAministrador;
+}

@@ -1,9 +1,16 @@
 #pragma once
+#include "../Nodos/NodoArbolB.h"
 #include "../Nodos/NodoBase.h"
+
 class ArbolB
 {
-    NodoBase* Raiz;
+    NodoArbolB* Raiz = nullptr;
     int Grado = 5;
 public:
     
+    void Insertar(NodoBase* Nodo);
+
+    void Recorrer();
+
+    NodoArbolB* Buscar(int k, NodoBase*& Nodo);
 };

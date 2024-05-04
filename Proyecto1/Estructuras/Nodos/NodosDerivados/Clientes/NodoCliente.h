@@ -3,16 +3,19 @@
 
 #include "../../NodoBase.h"
 
-class NodoCliente : public NodoBase {
-    public:
-        int Cedula;
-        std::string Nombre;
-        int CodCiudad;
-        int Telefono;
-        std::string Correo;
-        int Facturas;
-        float Compra
+class NodoCliente : public NodoBase
+{
+public:
+    int Cedula;
+    std::string Nombre;
+    int CodCiudad;
+    int Telefono;
+    std::string Correo;
+    int Facturas;
+    float Compra;
 
-        NodoCliente(std::string& Linea);
-        void Mostrar() override;
-    };
+    NodoCliente(std::string& Linea);
+    void Mostrar() override;
+
+    int GetLlave() override;
+};

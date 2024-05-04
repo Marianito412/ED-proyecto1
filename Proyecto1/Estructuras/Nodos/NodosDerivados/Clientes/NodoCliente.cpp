@@ -33,3 +33,8 @@ void NodoCliente::Mostrar() {
     std::cout << "Cedula: " << Cedula << ", Nombre: " << Nombre << ", CodCiudad: " << CodCiudad << ", Telefono: " << Telefono << ", Correo: " << Correo << std::endl;
     NodoBase::Mostrar();
 }
+
+int NodoCliente::GetLlave()
+{
+    return Cedula;
+}

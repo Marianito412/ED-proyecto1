@@ -8,7 +8,7 @@ public:
 
     NodoBase* Izquierda;
     NodoBase* Derecha;
-
+    
     NodoBase* padre;
     int FactorBalance;
     int color;

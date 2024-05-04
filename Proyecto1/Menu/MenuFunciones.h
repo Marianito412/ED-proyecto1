@@ -3,11 +3,13 @@
 #include "../Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 #include "../Estructuras/Arboles/ArbolBinario/ArbolBinario.h"
 #include "../Estructuras/Arboles/ArbolRN/ArbolRN.h"
+#include "../Estructuras/Arboles/ArbolB.h"
 #include "../Estructuras/ListaCircular/ListaCircular.h"
 #include "../Estructuras/ListaDoble/ListaDoble.h"
 #include "../Estructuras/ListaDobleCircular/ListaDobleCircular.h"
 #include "../Estructuras/ListaSimple/ListaSimple.h"
 #include "../Estructuras/TablaHash/TablaHash.h"
+
 
 
 class MenuFunciones
@@ -58,9 +60,9 @@ public:
     static void EncontrarAdministrador(TablaHash* TablaAdmins, ListaCircular* ListaCiudades);
     static void ModificarAdministrador(TablaHash* TablaAdmins, ListaCircular* ListaCiudades);
 
-    /*static void InsertarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);
+    static void InsertarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);
     static void EncontrarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);
-    static void ModificarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);*/
+    static void ModificarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades);
 #pragma endregion 
 
 #pragma region Marca

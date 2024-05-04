@@ -165,6 +165,7 @@
     <ClCompile Include="Estructuras\ListaDobleCircular\ListaDobleCircular.cpp" />
     <ClCompile Include="Estructuras\ListaDoble\ListaDoble.cpp" />
     <ClCompile Include="Estructuras\ListaSimple\ListaSimple.cpp" />
+    <ClCompile Include="Estructuras\Nodos\NodoArbolB.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodoBase.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Administrador\NodoAdmin.cpp" />
     <ClCompile Include="Estructuras\Nodos\NodosDerivados\Ciudad\NodoCiudad.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="Estructuras\ListaDobleCircular\ListaDobleCircular.h" />
     <ClInclude Include="Estructuras\ListaDoble\ListaDoble.h" />
     <ClInclude Include="Estructuras\ListaSimple\ListaSimple.h" />
+    <ClInclude Include="Estructuras\Nodos\NodoArbolB.h" />
     <ClInclude Include="Estructuras\Nodos\NodoBase.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Administrador\NodoAdmin.h" />
     <ClInclude Include="Estructuras\Nodos\NodosDerivados\Ciudad\NodoCiudad.h" />

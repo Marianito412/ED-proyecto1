@@ -345,36 +345,57 @@ void MenuFunciones::ModificarCiudadABB(ArbolBinario* Arbol)
 #pragma endregion 
 
 
-//#pragma region Administrador
-//
-//void MenuFunciones::InsertarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
-//{
-//    string LineaAdmin;
-//    cout << "Ingrese la siguiente información separada por ';'" << endl;
-//    cout << "Codigo de administrador, Nombre, Codigo de ciudad, Telefono, Correo" << endl;
-//    cin >> LineaAdmin;
-//
-//    NodoAdmin* Admin = new NodoAdmin(LineaAdmin);
-//    Arbol->InsertarNodo(Admin, Admin->CodAministrador);
-//    Arbol->Mostrar();
-//}
-//
-//void MenuFunciones::EncontrarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
-//{
-//    int CodAdmin;
-//    cout << "Ingrese el código del administrador a buscar" << endl;
-//    cin >> CodAdmin;
-//
-//    NodoBase* Nodo = Arbol->BuscarNodo(CodAdmin);
-//    if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo)) {
-//        cout << "Se encontró el administrador: " << endl;
-//        Admin->Mostrar();
-//    }
-//    else {
-//        cout << "No se encontró el administrador solicitado" << endl;
-//    }
-//}
-//
+#pragma region Administrador
+
+void MenuFunciones::InsertarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+{
+    int CodAdmin, CodCiudad, Telefono;
+    string Nombre, Correo;
+
+    cout<<"Ingrese el codigo de administrador: ";
+    cin>>CodAdmin;
+
+    cout<<"Ingrese el nombre: ";
+    cin>>Nombre;
+
+    cout<<"Ingrese el codigo de ciudad: ";
+    cin>>CodCiudad;
+
+    cout<<"Ingrese el telefono: ";
+    cin>>Telefono;
+
+    cout<<"Ingrese el correo: ";
+    cin>>Correo;
+    
+    string LineaAdmin;
+    cout << "Ingrese la siguiente información separada por ';'" << endl;
+    cout << "Codigo de administrador, Nombre, Codigo de ciudad, Telefono, Correo" << endl;
+    cin >> LineaAdmin;
+
+    NodoAdmin* Admin = new NodoAdmin(CodAdmin, Nombre, CodCiudad, Telefono, Correo);
+    Arbol->Insertar(Admin);
+    //Arbol->Mostrar();
+}
+
+void MenuFunciones::EncontrarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
+{
+    int CodAdmin;
+    cout << "Ingrese el código del administrador a buscar: " << endl;
+    cin >> CodAdmin;
+
+    NodoBase* Nodo = nullptr;
+    NodoArbolB* NodoArbol = Arbol->Buscar(CodAdmin, Nodo);
+    if (NodoAdmin* Admin = dynamic_cast<NodoAdmin*>(Nodo))
+    {
+        cout << "Se encontró el administrador: " << endl;
+        Admin->Mostrar();
+    }
+    else
+    {
+        cout << "No se encontró el administrador solicitado" << endl;
+    }
+}
+
 //void MenuFunciones::ModificarAdministradorB(ArbolB* Arbol, ListaCircular* ListaCiudades)
 //{
 //    int CodAdmin;

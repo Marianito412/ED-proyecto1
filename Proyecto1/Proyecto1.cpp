@@ -4,6 +4,7 @@
 
 #include "BibliotecaReportes/BibliotecaReportes.h"
 #include "BibliotecaReportes/BibliotecaReportesArboles.h"
+#include "Estructuras/Arboles/ArbolB.h"
 #include "Estructuras/Arboles/ArbolAA/ArbolAA.h"
 #include "Estructuras/Arboles/ArbolAVL/ArbolAVL.h"
 #include "Estructuras/Arboles/ArbolBinario/ArbolBinario.h"
@@ -206,37 +207,38 @@ ArbolBinario* CargarCiudadesABB(string NombreArchivo)
     return ArbolArchivo;
 }
 
-//ArbolB* CargarAdminsB(string NombreArchivo)
-//{
-//    ifstream Archivo;
-//    ArbolB* ArbolAdmins = new ArbolB();
-//    const string Directorio = DIRECTORIO + NombreArchivo;
-//    cout << Directorio << endl;
-//    Archivo.open(Directorio);
-//    for (string Linea; getline(Archivo, Linea);)
-//    {
-//        if (Linea.empty()) continue;
-//        NodoAdmin* NuevoAdmin = new NodoAdmin(Linea);
-//        ArbolAdmins->InsertarNodo(NuevoAdmin);
-//    }
-//    return ArbolAdmins;
-//}
-//
-//ArbolB* CargarClientesB(string NombreArchivo)
-//{
-//    ifstream Archivo;
-//    ArbolB* ArbolClientes = new ArbolB();
-//    const string Directorio = DIRECTORIO + NombreArchivo;
-//    cout << Directorio << endl;
-//    Archivo.open(Directorio);
-//    for (string Linea; getline(Archivo, Linea);)
-//    {
-//        if (Linea.empty()) continue;
-//        NodoCliente* NuevoCliente = new NodoCliente(Linea);
-//        ArbolClientes->InsertarNodo(NuevoCliente);
-//    }
-//    return ArbolClientes;
-//}
+ArbolB* CargarAdminsB(string NombreArchivo)
+{
+    ifstream Archivo;
+    ArbolB* ArbolAdmins = new ArbolB();
+    const string Directorio = DIRECTORIO + NombreArchivo;
+    cout << Directorio << endl;
+    Archivo.open(Directorio);
+    for (string Linea; getline(Archivo, Linea);)
+    {
+        if (Linea.empty()) continue;
+        NodoAdmin* NuevoAdmin = new NodoAdmin(Linea);
+        //NuevoAdmin->Mostrar();
+        ArbolAdmins->Insertar(NuevoAdmin);
+    }
+    return ArbolAdmins;
+}
+
+ArbolB* CargarClientesB(string NombreArchivo)
+{
+    ifstream Archivo;
+    ArbolB* ArbolClientes = new ArbolB();
+    const string Directorio = DIRECTORIO + NombreArchivo;
+    cout << Directorio << endl;
+    Archivo.open(Directorio);
+    for (string Linea; getline(Archivo, Linea);)
+    {
+        if (Linea.empty()) continue;
+        NodoCliente* NuevoCliente = new NodoCliente(Linea);
+        ArbolClientes->Insertar(NuevoCliente);
+    }
+    return ArbolClientes;
+}
 
 int main()
 {
@@ -261,8 +263,10 @@ int main()
     ArbolBinario* ArbolCiudades = CargarCiudadesABB("Ciudades.txt");
     ArbolCiudades->Infijo(ArbolCiudades->Raiz);
 
-    //ArbolB* ArbolAdmin = CargarAdmins("Adminstrador.txt");
-    //ArbolB* ArbolClientes = CargarClientes("Clientes.txt");
+    ArbolB* ArbolAdmin = CargarAdminsB("Administradores.txt");
+    ArbolB* ArbolClientes = CargarClientesB("Clientes.txt");
+
+    ArbolAdmin->Recorrer();
 
 Inicio:
     
@@ -330,7 +334,7 @@ Inicio:
                                 //MenuFunciones::InsertarClientesB(ArbolClientes);
                                 break;
                             case 6:                               
-                                //MenuFunciones::InsertarAdministradorB(ArboAdministrador);
+                                MenuFunciones::InsertarAdministradorB(ArbolAdmin, nullptr);
                                 break;
                             case 7:
                                 MenuFunciones::InsertarCiudadABB(ArbolCiudades);
@@ -375,7 +379,7 @@ Inicio:
                                 //MenuFunciones::EncontrarClientesB(ArbolClientes);
                                 break;
                             case 6:                                
-                                //MenuFunciones::EncontrarAdministradorB(ArboAdministrador);
+                                MenuFunciones::EncontrarAdministradorB(ArbolAdmin, nullptr);
                                 break;
                             case 7:
                                 MenuFunciones::EncontrarCiudadABB(ArbolCiudades);
